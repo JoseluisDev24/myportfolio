@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Skills() {
   const skills = [
     {
@@ -66,7 +68,7 @@ export default function Skills() {
             key={skill.name}
             className={`flex flex-col items-center justify-center gap-2 p-2 w-20 sm:w-22 rounded-md border border-transparent ${skill.neon} backdrop-blur-md hover:scale-105 transition-transform`}
           >
-            <img
+            <Image
               src={skill.icon}
               alt={skill.name}
               className="w-10 h-10 object-contain"

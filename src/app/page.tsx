@@ -58,8 +58,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-300 py-10">About me</h2>
           <p className="bg-white/5 border border-white/20 backdrop-blur-md shadow-2xl rounded-lg p-6 mt-4 text-gray-200 max-w-3xl mx-auto">
             I&apos;m a full-stack developer. My strongest skills are HTML5,
-            CSS3, and JavaScript. I'm also comfortable working with frameworks
-            like NextJs. I'm constantly expanding my knowledge with new tools
+            CSS3, and JavaScript. I&apos;m also comfortable working with frameworks
+            like NextJs. I&apos;m constantly expanding my knowledge with new tools
             and technologies. My goal is to always learn, innovate, and add
             value with every line of code.
           </p>

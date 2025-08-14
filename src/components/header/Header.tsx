@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Header() {
   return (
     <header className=" text-white py-4">
@@ -7,24 +9,24 @@ export function Header() {
         </div>
         <ul className="flex space-x-4 justify-center">
           <li>
-            <a href="/" className="hover:underline">
+            <Link href="/" className="hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="hover:underline">
+            <Link href="/about" className="hover:underline">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/projects" className="hover:underline">
+            <Link href="/projects" className="hover:underline">
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="hover:underline">
+            <Link href="/contact" className="hover:underline">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
