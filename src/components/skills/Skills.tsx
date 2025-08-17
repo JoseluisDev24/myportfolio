@@ -9,7 +9,7 @@ export default function Skills() {
       neon: "shadow-[0_0_4px_#F97316]",
     },
     {
-      name: "Css",
+      name: "CSS",
       icon: "/skills/css-min.png",
       neon: "shadow-[0_0_4px_#22D3EE]",
     },
@@ -44,7 +44,7 @@ export default function Skills() {
       neon: "shadow-[0_0_4px_#EC4899]",
     },
     {
-      name: "Mongo DB",
+      name: "MongoDB",
       icon: "/skills/mongo.png",
       neon: "shadow-[0_0_4px_#22C55E]",
     },
@@ -70,12 +70,12 @@ export default function Skills() {
   };
 
   return (
-    <section className="text-center py-12">
+    <div className="text-center mt-16 mb-6">
       <SplitText
-        text="My Skills"
-        className="text-4xl py-6 font-semibold text-center"
-        delay={100}
-        duration={1}
+        text="Tech Stack"
+        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.40)]"
+        delay={110}
+        duration={3}
         ease="power3.out"
         splitType="lines"
         from={{ opacity: 0, y: 40 }}
@@ -102,6 +102,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
