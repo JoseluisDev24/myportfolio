@@ -5,22 +5,17 @@ export default function Skills() {
     {
       name: "HTML5",
       icon: "/skills/html-min.png",
-      neon: "shadow-[0_0_4px_#00aaff]",
+      neon: "shadow-[0_0_4px_#F97316]",
     },
     {
       name: "Css",
       icon: "/skills/css-min.png",
-      neon: "shadow-[0_0_4px_#4F46E5]",
+      neon: "shadow-[0_0_4px_#22D3EE]",
     },
     {
       name: "JavaScript",
       icon: "/skills/js-min.png",
       neon: "shadow-[0_0_4px_#FACC15]",
-    },
-    {
-      name: "Sass",
-      icon: "/skills/sass-min.png",
-      neon: "shadow-[0_0_4px_#F472B6]",
     },
     {
       name: "React",
@@ -33,29 +28,39 @@ export default function Skills() {
       neon: "shadow-[0_0_4px_#22C55E]",
     },
     {
+      name: "Sass",
+      icon: "/skills/sass-min.png",
+      neon: "shadow-[0_0_4px_#F472B6]",
+    },
+    {
       name: "Tailwind",
       icon: "/skills/tailwind-min.png",
       neon: "shadow-[0_0_4px_#38BDF8]",
     },
     {
+      name: "Figma",
+      icon: "/skills/figma.png",
+      neon: "shadow-[0_0_4px_#EC4899]",
+    },
+    {
       name: "Mongo DB",
       icon: "/skills/mongo.png",
-      neon: "shadow-[0_0_4px_#F87171]",
+      neon: "shadow-[0_0_4px_#22C55E]",
     },
     {
       name: "Next.js",
       icon: "/skills/nextJS-min.png",
-      neon: "shadow-[0_0_4px_#4ADE80]",
+      neon: "shadow-[0_0_4px_#f0f0f0]",
+    },
+    {
+      name: "Git",
+      icon: "/skills/git-min.png",
+      neon: "shadow-[0_0_4px_#F97316]",
     },
     {
       name: "GitHub",
       icon: "/skills/github-min.png",
       neon: "shadow-[0_0_4px_#A855F7]",
-    },
-    {
-      name: "Figma",
-      icon: "/skills/figma.png",
-      neon: "shadow-[0_0_4px_#EC4899]",
     },
   ];
 
@@ -71,6 +76,8 @@ export default function Skills() {
             <Image
               src={skill.icon}
               alt={skill.name}
+              width={40}
+              height={40}
               className="w-10 h-10 object-contain"
             />
             <p className="text-xs">{skill.name}</p>

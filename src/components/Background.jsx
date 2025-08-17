@@ -21,15 +21,15 @@ export default function Background() {
       <div
         className="
         absolute
-        top-72 left-8 h-[180px] w-[160px] blur-[78px]
+        top-72 left-8 h-[160px] w-[160px] blur-[78px]
         sm:top-64 sm:left-20 sm:h-[150px] sm:w-[150px] sm:blur-[64px]
-        md:top-80 md:left-36 md:h-[200px] md:w-[200px] md:blur-[100px]
-        rounded-full bg-blue-400/20
+        md:top-80 md:left-36 md:h-[240px] md:w-[200px] md:blur-[80px]
+        rounded-full bg-blue-400/10
       "
       />
 
       {/* Blob inferior derecha */}
-      <div
+      {/* <div
         className="
         absolute
         -bottom-14 -right-24 h-[240px] w-[240px] blur-[64px]
@@ -37,7 +37,7 @@ export default function Background() {
         md:-right-32 md:h-[400px] md:w-[400px] md:blur-[100px]
         rounded-full bg-blue-400/10
       "
-      />
+      /> */}
 
       {/* Textura (ruido) */}
       <div className="absolute inset-0 mix-blend-soft-light opacity-20">
