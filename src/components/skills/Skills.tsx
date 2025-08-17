@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SplitText from "../text/SplitText";
 
 export default function Skills() {
   const skills = [
@@ -64,9 +65,26 @@ export default function Skills() {
     },
   ];
 
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
+
   return (
     <section className="text-center py-12">
-      <h2 className="text-4xl font-bold text-gray-300 pb-10">Skills</h2>
+      <SplitText
+        text="My Skills"
+        className="text-4xl py-6 font-semibold text-center"
+        delay={100}
+        duration={1}
+        ease="power3.out"
+        splitType="lines"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
         {skills.map((skill) => (
           <div

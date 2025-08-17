@@ -14,25 +14,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative min-h-dvh bg-black text-white antialiased overflow-x-hidden">
-        {/* Fondo siempre por detrás */}
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
           <Background />
         </div>
 
-        {/* Header arriba; que tu Header tenga h-16/sticky y contenedor interno */}
         <Header />
 
-        {/* Contenido centrado y con el mismo ancho del Header */}
         <main
           id="content"
-          className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10"
+          className="relative z-10 w-full max-w-8xl mx-auto "
         >
           {children}
         </main>
 
-        {/* Footer centrado y alineado al mismo ancho */}
-        <footer className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 py-8 text-center text-gray-400 border-t border-white/10">
-          © {new Date().getFullYear()} J Rosano. All rights reserved.
+        <footer className="relative z-10 w-full max-w-7xl mx-auto py-8 text-center text-gray-400 border-t border-white/10">
+          © {new Date().getFullYear()} Jose Rosano.
         </footer>
       </body>
     </html>
