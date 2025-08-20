@@ -3,10 +3,11 @@ import "./globals.css";
 import { Poppins, Manrope } from "next/font/google";
 import Background from "@/components/Background";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], 
+  weight: ["400", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -18,10 +19,10 @@ const manrope = Manrope({
   display: "swap",
 });
 
-
 export const metadata: Metadata = {
   title: "Portfolio | Jose Rosano",
-  description: "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
+  description:
+    "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
 };
 
 export default function RootLayout({
@@ -40,9 +41,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="relative z-10 w-full max-w-7xl mx-auto py-8 text-center text-gray-400 border-t border-white/10">
-          © {new Date().getFullYear()} Jose Rosano.
-        </footer>
+        <Footer />
       </body>
     </html>
   );

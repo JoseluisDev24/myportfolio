@@ -10,7 +10,7 @@ export default function Header() {
     { name: "About me", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Resume", href: "/" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "#footer" },
   ];
 
   return (

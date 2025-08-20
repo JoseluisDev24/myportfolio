@@ -73,7 +73,7 @@ export default function Skills() {
     <div className="text-center mt-16 mb-6">
       <SplitText
         text="Tech Stack"
-        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.40)]"
+        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)]"
         delay={110}
         duration={3}
         ease="power3.out"
@@ -85,11 +85,11 @@ export default function Skills() {
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
       />
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-6 rounded-xl bg-white/4 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className={`flex flex-col items-center justify-center gap-2 p-2 w-20 sm:w-22 rounded-md border border-transparent ${skill.neon} backdrop-blur-md hover:scale-105 transition-transform`}
+            className={`flex flex-col items-center justify-center gap-2 p-2 w-20 sm:w-22 rounded-md border border-transparent ${skill.neon} backdrop-blur-sm hover:scale-105 transition-transform`}
           >
             <Image
               src={skill.icon}

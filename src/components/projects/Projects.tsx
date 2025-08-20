@@ -36,17 +36,17 @@ export default function Projects() {
         repoUrl: "https://github.com/JoseluisDev24/weather-app.git",
       },
       {
-        title: "Todo List",
+        title: "Website",
         description: "Catálogo, carrito y checkout con Stripe.",
-        imageSrc: "/projects/todolist.png",
+        imageSrc: "/projects/sarandifit.png",
         tags: ["Next.js", "Stripe", "Prisma"],
         liveUrl: "https://example.com/shop",
         repoUrl: "https://github.com/user/shop",
       },
       {
-        title: "Sitio Web",
+        title: "Todo List",
         description: "Catálogo, carrito y checkout con Stripe.",
-        imageSrc: "/projects/sarandifit.png",
+        imageSrc: "/projects/todolist.png",
         tags: ["Next.js", "Stripe", "Prisma"],
         liveUrl: "https://example.com/shop",
         repoUrl: "https://github.com/user/shop",
@@ -62,10 +62,10 @@ export default function Projects() {
     ];
 
     return (
-      <div className="flex flex-col items-center justify-center mt-16 mb-6">
+      <div id="projects" className="flex flex-col items-center justify-center mt-16 mb-6">
         <SplitText
           text="Projects"
-          className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.40)]"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)]"
           delay={110}
           duration={3}
           ease="power3.out"
@@ -80,7 +80,7 @@ export default function Projects() {
         <p className="text-lg text-gray-400 mb-10">
           Here are some of my recent projects.
         </p>
-        <section className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <section className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 px-1">
           {projects.map((p) => (
             <ProjectCard key={p.title} {...p} />
           ))}

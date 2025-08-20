@@ -14,7 +14,7 @@ export default function About() {
         />
         <SplitText
           text="About Me"
-          className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.40)] mt-16 mb-6"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-6"
           delay={110}
           duration={3}
           ease="power3.out"

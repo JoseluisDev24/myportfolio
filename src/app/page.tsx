@@ -6,6 +6,8 @@ import Particles from "@/components/particles/Particles";
 import Projects from "@/components/projects/Projects";
 import About from "@/components/about/About";
 import Skills from "@/components/skills/Skills";
+import Link from "next/link";
+import LatestRepos from "@/components/latestRepos/LatestRepos";
 
 export default function Home() {
 
@@ -85,12 +87,12 @@ export default function Home() {
                 />
 
                 <div className="pt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-                  <button className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15">
+                  <Link href={"#projects"} className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15">
                     View Projects
-                  </button>
-                  <button className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15">
+                  </Link>
+                  <Link href={"#footer"} className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15">
                     Contact Me
-                  </button>
+                  </Link>
                 </div>
               </div>
             </section>
@@ -102,6 +104,9 @@ export default function Home() {
             </section>
             <section>
               <Skills />
+            </section>
+            <section>
+              <LatestRepos />
             </section>
           </main>
         </div>
