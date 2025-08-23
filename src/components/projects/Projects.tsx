@@ -29,7 +29,7 @@ export default function Projects() {
       {
         title: "Weather App",
         description:
-          "Geolocated weather with 5-day forecast, powered by OpenWeather; clean, responsive UI.",
+          "Real-time weather app using OpenWeatherMap API with location-based forecasts.",
         imageSrc: "/projects/clima.jpg",
         tags: ["Next.js", "API", "Tailwind"],
         liveUrl: "https://weather-app-green-ten-93.vercel.app/",
@@ -37,27 +37,28 @@ export default function Projects() {
       },
       {
         title: "Website",
-        description: "Catálogo, carrito y checkout con Stripe.",
+        description:
+          "Professional fitness website with responsive design and optimized performance.",
         imageSrc: "/projects/sarandifit.png",
-        tags: ["Next.js", "Stripe", "Prisma"],
-        liveUrl: "https://example.com/shop",
-        repoUrl: "https://github.com/user/shop",
+        tags: ["Vite", "Sass"],
+        liveUrl: "https://sarandifit-prueba.netlify.app/",
       },
       {
         title: "Todo List",
-        description: "Catálogo, carrito y checkout con Stripe.",
+        description:
+          "Full-stack task management app with React and MongoDB, featuring CRUD operations.",
         imageSrc: "/projects/todolist.png",
-        tags: ["Next.js", "Stripe", "Prisma"],
-        liveUrl: "https://example.com/shop",
-        repoUrl: "https://github.com/user/shop",
+        tags: ["Next.js", "MongoDB", "Tailwind"],
+        liveUrl: "https://back-next-js.vercel.app/",
+        repoUrl: "https://github.com/JoseluisDev24/backNextJS.git",
       },
       {
         title: "Todo List JS",
-        description: "Catálogo, carrito y checkout con Stripe.",
+        description:
+          "Pure JavaScript todo application demonstrating DOM manipulation and vanilla JS skills.",
         imageSrc: "/projects/tododom.png",
-        tags: ["Next.js", "Stripe", "Prisma"],
-        liveUrl: "https://example.com/shop",
-        repoUrl: "https://github.com/user/shop",
+        tags: ["HTML", "CSS", "JavaScript"],
+        liveUrl: "https://todo-bios.netlify.app//",
       },
     ];
 

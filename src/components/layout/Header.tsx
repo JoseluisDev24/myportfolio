@@ -9,8 +9,7 @@ export default function Header() {
   const menuItems = [
     { name: "About me", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "/" },
-    { name: "Contact", href: "#footer" },
+    { name: "Resume", href: "/JoseluisRosano.pdf", target: "_blank"}, 
   ];
 
   return (
@@ -35,6 +34,7 @@ export default function Header() {
             <li key={item.name}>
               <Link
                 href={item.href}
+                target={item.target}
                 className="
                   underline decoration-transparent decoration-2 underline-offset-4
                   transition-colors duration-200 ease-out
@@ -74,6 +74,7 @@ export default function Header() {
                   <li key={item.name} className="w-full">
                     <Link
                       href={item.href}
+                      target={item.target}
                       className="block py-2 hover:underline"
                       onClick={() => setIsOpen(false)}
                     >

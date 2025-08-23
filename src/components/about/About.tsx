@@ -27,11 +27,13 @@ export default function About() {
           onLetterAnimationComplete={handleAnimationComplete}
         />
         <p className="mx-auto max-w-3xl rounded-lg border border-white/10 bg-white/5 p-6 text-gray-200 shadow-2xl backdrop-blur-md">
-          I&apos;m a full-stack developer. My strongest skills are HTML5, CSS3,
-          and JavaScript. I&apos;m also comfortable working with frameworks like
-          NextJs. I&apos;m constantly expanding my knowledge with new tools and
-          technologies. My goal is to always learn, innovate, and add value with
-          every line of code.
+          Full-stack developer from Uruguay specializing in building web
+          applications with JavaScript, React, and Next.js. I&apos;ve built
+          everything from functional e-commerce sites to weather apps and task
+          management tools. I&apos;m passionate about writing clean code, creating
+          intuitive interfaces, and optimizing performance. Every project is an
+          opportunity to learn and add real value. Ready to contribute to remote
+          teams or freelance projects.
         </p>
       </div>
     );
