@@ -12,6 +12,17 @@ type Repo = {
   url: string;
 };
 
+export type GitHubRepo = {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string | null;
+  fork: boolean;
+  language: string | null;
+  stargazers_count: number;
+  updated_at: string; // ISO
+};
+
 const REPOS: Repo[] = [
   {
     name: "nextjs-portfolio",
@@ -78,7 +89,7 @@ const getTimeAgo = (dateString: string): string => {
   return "just now";
 };
 
-const transformGitHubData = (githubRepos: any[]): Repo[] => {
+const transformGitHubData = (githubRepos: GitHubRepo[]): Repo[] => {
   return githubRepos
     .filter((repo) => !repo.fork) 
     .sort(
