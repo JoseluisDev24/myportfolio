@@ -131,10 +131,6 @@ export default function LatestRepos({
     }
   );
 
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
-
   let repos: Repo[] = REPOS;
   let showLoadingState = false;
   let showErrorState = false;
@@ -149,6 +145,10 @@ export default function LatestRepos({
       repos = transformGitHubData(githubData);
     }
   }
+
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
 
   return (
     <section
@@ -223,7 +223,7 @@ export default function LatestRepos({
 
 function RepoCard({ repo }: { repo: Repo }) {
   return (
-    <article className="rounded-2xl p-5 bg-white/5 backdrop-blur-md border border-white/10 ring-1 ring-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:bg-white/10 transition-colors">
+    <article className="rounded-lg p-5 bg-white/5 backdrop-blur-md border border-white/10 ring-1 ring-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:bg-white/10 transition-colors">
       <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
         {repo.name}
       </h3>

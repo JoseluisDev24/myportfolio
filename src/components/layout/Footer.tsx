@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="mailto:joseluis24dev@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
+              className="flex items-center gap-2 px-6 py-3 bg-blue-500/15 hover:bg-blue-600/70 border border-white/20 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
             >
               <MailIcon className="h-5 w-5" />
               Send Email
@@ -34,7 +34,7 @@ export default function Footer() {
               href="https://wa.me/59892171503"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
+              className="flex items-center gap-2 px-6 py-3 bg-green-600/70 hover:bg-green-600 border border-white/20 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
             >
               <WhatsAppIcon className="h-5 w-5" />
               WhatsApp

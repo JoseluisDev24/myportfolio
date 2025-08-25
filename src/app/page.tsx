@@ -89,13 +89,13 @@ export default function Home() {
                 <div className="pt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <Link
                     href={"#projects"}
-                    className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15"
+                    className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15 text-center"
                   >
                     View Projects
                   </Link>
                   <Link
                     href={"#footer"}
-                    className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15"
+                    className="w-full sm:w-40 rounded-md border border-white/20 bg-white/5 px-6 py-2 cursor-pointer text-white shadow-lg backdrop-blur-md transition hover:bg-white/15 text-center"
                   >
                     Contact Me
                   </Link>

@@ -85,7 +85,7 @@ export default function Skills() {
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
       />
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-6 rounded-xl bg-white/4 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-6 rounded-lg bg-white/4 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
         {skills.map((skill) => (
           <div
             key={skill.name}

@@ -34,7 +34,7 @@ export default function ProjectCard({
   return (
     <article
       className={[
-        "group relative h-full rounded-xl w-full md:max-w-none mx-auto",
+        "group relative h-full rounded-lg w-full md:max-w-none mx-auto",
         "bg-white/8 backdrop-blur-xl border border-white/15",
         "shadow-[0_8px_30px_rgba(0,0,0,0.25)]",
         "ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300",
