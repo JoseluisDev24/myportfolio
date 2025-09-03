@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/text/TextType.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/text/TextType.jsx", "src/utils/timeUtils.tsx", "src/hooks/UseGithubRepos.tsx ", "src/utils/t"],
   "exclude": ["node_modules"]
 }
