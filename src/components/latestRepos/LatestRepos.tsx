@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import SplitText from "../text/SplitText";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
@@ -14,13 +14,20 @@ type Repo = {
   url: string;
 };
 
-export default function SimpleGitHubRepos() {
+type GitHubRepo = {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string | null;
+  fork: boolean;
+  language: string | null;
+  stargazers_count: number;
+  updated_at: string;
+};
+
+export default function LatestRepos() {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchRepos();
-  }, []);
 
   const getTimeAgo = (dateString: string): string => {
     const date = new Date(dateString);
@@ -45,21 +52,21 @@ export default function SimpleGitHubRepos() {
     return "just now";
   };
 
-  const fetchRepos = async () => {
+  const fetchRepos = useCallback(async () => {
     try {
       const response = await fetch(
         "https://api.github.com/users/JoseluisDev24/repos?sort=updated&per_page=20"
       );
-      const data = await response.json();
+      const data: GitHubRepo[] = await response.json();
 
       const transformedRepos = data
-        .filter((repo: any) => !repo.fork) 
+        .filter((repo: GitHubRepo) => !repo.fork)
         .sort(
-          (a: any, b: any) =>
+          (a: GitHubRepo, b: GitHubRepo) =>
             new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
-        ) 
-        .slice(0, 4) 
-        .map((repo: any) => ({
+        )
+        .slice(0, 4)
+        .map((repo: GitHubRepo) => ({
           name: repo.name,
           description: repo.description || "No description available",
           language: repo.language || "Unknown",
@@ -74,7 +81,11 @@ export default function SimpleGitHubRepos() {
       console.error("Error:", error);
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchRepos();
+  }, [fetchRepos]);
 
   const dotClassFor = (lang: string) => {
     const base = "h-2.5 w-2.5 rounded-full inline-block";
@@ -90,9 +101,9 @@ export default function SimpleGitHubRepos() {
     return (
       <div className="flex flex-col justify-center items-center h-64 gap-6">
         <span>Loading repositories</span>
-      <Box>
-        <CircularProgress size="3rem"/>
-      </Box>
+        <Box>
+          <CircularProgress size="3rem" />
+        </Box>
       </div>
     );
   }
@@ -100,7 +111,7 @@ export default function SimpleGitHubRepos() {
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
-  
+
   return (
     <div className="max-w-4xl mx-auto p-6 flex flex-col">
       <SplitText

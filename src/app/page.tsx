@@ -112,7 +112,7 @@ export default function Home() {
               <Skills />
             </section>
             <section>
-              <LatestRepos username="JoseluisDev24" />
+              <LatestRepos />
             </section>
           </main>
         </div>
