@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
+import LanguageToggle from "@/components/language/buttonLanguage/ToggleLanguage";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
   const menuItems = [
     { name: "About me", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "/JoseluisRosano.pdf", target: "_blank"}, 
+    { name: "Resume", href: "/JoseluisRosano.pdf", target: "_blank" },
   ];
 
   return (
@@ -47,13 +48,19 @@ export default function Header() {
           ))}
         </ul>
 
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
-        >
-          <MenuIcon fontSize="large" />
-        </button>
+        <div className="hidden md:flex items-center justify-between">
+          <LanguageToggle />
+        </div>
+
+        <div className="md:hidden flex items-center justify-between gap-2">
+          <LanguageToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu"
+          >
+            <MenuIcon fontSize="large" />
+          </button>
+        </div>
       </nav>
 
       {isOpen && (
