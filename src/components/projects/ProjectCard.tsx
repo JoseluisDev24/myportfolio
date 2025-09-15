@@ -6,6 +6,7 @@ import type { SVGProps } from "react";
 
 type Size = "sm" | "md";
 
+
 export type ProjectCardProps = {
   title: string;
   description: string;

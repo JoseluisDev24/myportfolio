@@ -1,0 +1,100 @@
+{
+  "header": {
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "hero": {
+    "welcome": "Welcome to My Portfolio",
+    "title": "Hi, I'm Jose Rosano, a passionate",
+    "subtitle": "Fullstack Developer.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "typewriterTexts": [
+      "I love coding and creating innovative solutions",
+      "Explore my projects and learn more about me"
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a full-stack developer. My strongest skills are HTML5, CSS3, and JavaScript. I'm also comfortable working with frameworks like NextJs. I'm constantly expanding my knowledge with new tools and technologies. My goal is to always learn, innovate, and add value with every line of code."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Here are some of my recent projects.",
+    "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Next.js portfolio with glassmorphism, smooth scroll, and subtle animations."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Full-stack Next.js store with product catalog and cart; includes admin dashboard."
+      },
+      "weather": {
+        "title": "Weather App",
+        "description": "Real-time weather app using OpenWeatherMap API with location-based forecasts."
+      },
+      "website": {
+        "title": "Website",
+        "description": "Professional fitness website with responsive design and optimized performance."
+      },
+      "todoList": {
+        "title": "Todo List",
+        "description": "Full-stack task management app with React and MongoDB, featuring CRUD operations."
+      },
+      "todoListJS": {
+        "title": "Todo List JS",
+        "description": "Pure JavaScript todo application demonstrating DOM manipulation and vanilla JS skills."
+      }
+    }
+  },
+  "techStack": {
+    "title": "Tech Stack"
+  },
+  "repositories": {
+    "title": "Latest Repositories",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "footer": {
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "description": "I'm open to new opportunities. Whether freelance, remote, or in-person.",
+      "sendEmail": "Send Email",
+      "whatsapp": "WhatsApp"
+    },
+    "brand": {
+      "name": "JRDev",
+      "description": "Full-stack developer. I build clean, fast, and accessible web experiences."
+    },
+    "navigation": {
+      "site": {
+        "title": "Site",
+        "aboutMe": "About me",
+        "projects": "Projects",
+        "contact": "Contact"
+      },
+      "resources": {
+        "title": "Resources",
+        "resume": "Resume",
+        "latestRepos": "Latest repos"
+      },
+      "contact": {
+        "title": "Contact",
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "bottom": {
+      "copyright": "Jose Rosano.",
+      "builtWith": "Built with Next.js & Tailwind",
+      "backToTop": "Back to top"
+    }
+  },
+  "language": {
+    "switchTo": "Switch to",
+    "spanish": "Spanish",
+    "english": "English"
+  }
+}

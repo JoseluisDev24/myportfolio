@@ -1,7 +1,11 @@
 import Image from "next/image";
 import SplitText from "../text/SplitText";
 
-export default function Skills() {
+interface SkillsProps {
+  dict: Dictionary;
+}
+
+export default function Skills({dict}: SkillsProps) {
   const skills = [
     {
       name: "HTML5",
@@ -72,7 +76,7 @@ export default function Skills() {
   return (
     <div className="text-center mt-16 mb-6">
       <SplitText
-        text="Tech Stack"
+        text={dict.techStack.title}
         className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)]"
         delay={110}
         duration={3}

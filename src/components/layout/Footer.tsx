@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 
-export default function Footer() {
+interface FooterProps {
+  dict: Dictionary;
+}
+
+export default function Footer({ dict }: FooterProps) {
   return (
     <footer id="footer" className="relative w-full mt-16">
       <div
@@ -15,11 +19,10 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-4 md:px-0 py-8 border-b border-white/10">
         <div className="text-center">
           <h3 className="text-2xl font-semibold text-white mb-3">
-            Do you have a project in mind?
+            {dict.footer.cta.title}
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            I&apos;m open to new opportunities. Whether freelance, remote, or
-            in-person.
+            {dict.footer.cta.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -28,7 +31,7 @@ export default function Footer() {
               className="flex items-center gap-2 px-6 py-3 bg-blue-500/15 hover:bg-blue-600/70 border border-white/20 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
             >
               <MailIcon className="h-5 w-5" />
-              Send Email
+              {dict.footer.cta.sendEmail}
             </a>
             <a
               href="https://wa.me/59892171503"
@@ -37,7 +40,7 @@ export default function Footer() {
               className="flex items-center gap-2 px-6 py-3 bg-green-600/70 hover:bg-green-600 border border-white/20 text-white rounded-lg font-medium transition-colors min-w-[200px] justify-center"
             >
               <WhatsAppIcon className="h-5 w-5" />
-              WhatsApp
+              {dict.footer.cta.whatsapp}
             </a>
           </div>
 
@@ -61,8 +64,7 @@ export default function Footer() {
               JR<span className="text-blue-500">Dev</span>
             </Link>
             <p className="mt-2 text-sm text-gray-300/90">
-              Full-stack developer. I build clean, fast, and accessible web
-              experiences.
+              {dict.footer.brand.description}
             </p>
 
             <div className="mt-4 flex items-center gap-3">
@@ -101,14 +103,16 @@ export default function Footer() {
   "
           >
             <div>
-              <h4 className="font-semibold text-gray-200">Site</h4>
+              <h4 className="font-semibold text-gray-200">
+                {dict.footer.navigation.site.title}
+              </h4>
               <ul className="mt-3 space-y-2 text-gray-300">
                 <li>
                   <Link
                     href="#about"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    About me
+                    {dict.footer.navigation.site.aboutMe}
                   </Link>
                 </li>
                 <li>
@@ -116,7 +120,7 @@ export default function Footer() {
                     href="#projects"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    Projects
+                    {dict.footer.navigation.site.projects}
                   </Link>
                 </li>
                 <li>
@@ -124,14 +128,16 @@ export default function Footer() {
                     href="#footer"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    Contact
+                    {dict.footer.navigation.site.contact}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-200">Resources</h4>
+              <h4 className="font-semibold text-gray-200">
+                {dict.footer.navigation.resources.title}
+              </h4>
               <ul className="mt-3 space-y-2 text-gray-300">
                 <li>
                   <Link
@@ -140,7 +146,7 @@ export default function Footer() {
                     download="JoseLuisRosanoCV.pdf"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    Resume
+                    {dict.footer.navigation.resources.resume}
                   </Link>
                 </li>
                 <li>
@@ -148,21 +154,23 @@ export default function Footer() {
                     href="#repos"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    Latest repos
+                    {dict.footer.navigation.resources.latestRepos}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="col-start-1 md:col-start-auto">
-              <h4 className="font-semibold text-gray-200">Contact</h4>
+              <h4 className="font-semibold text-gray-200">
+                {dict.footer.navigation.contact.title}
+              </h4>
               <ul className="mt-3 space-y-2 text-gray-300">
                 <li>
                   <a
                     href="mailto:joseluis24dev@gmail.com"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    Email
+                    {dict.footer.navigation.contact.email}
                   </a>
                 </li>
                 <li>
@@ -172,7 +180,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-green-500"
                   >
-                    WhatsApp
+                    {dict.footer.navigation.contact.whatsapp}
                   </a>
                 </li>
                 <li>
@@ -182,7 +190,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
                   >
-                    LinkedIn
+                    {dict.footer.navigation.contact.linkedin}
                   </a>
                 </li>
               </ul>
@@ -192,15 +200,15 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-white/10 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} Jose Rosano.
+            © {new Date().getFullYear()} {dict.footer.bottom.copyright}
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-400">
-            <span>Built with Next.js & Tailwind</span>
+            <span>{dict.footer.bottom.builtWith}</span>
             <a
               href="#top"
               className="underline decoration-transparent underline-offset-4 hover:decoration-blue-500"
             >
-              Back to top
+              {dict.footer.bottom.backToTop}
             </a>
           </div>
         </div>

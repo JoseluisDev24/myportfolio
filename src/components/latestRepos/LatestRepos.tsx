@@ -25,7 +25,11 @@ type GitHubRepo = {
   updated_at: string;
 };
 
-export default function LatestRepos() {
+interface LatestReposProps {
+  dict: Dictionary;
+}
+
+export default function LatestRepos({dict}: LatestReposProps) {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -115,7 +119,7 @@ export default function LatestRepos() {
   return (
     <div className="max-w-4xl mx-auto p-6 flex flex-col">
       <SplitText
-        text="Latest Repositories"
+        text={dict.repositories.title}
         className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-6"
         delay={110}
         duration={3}

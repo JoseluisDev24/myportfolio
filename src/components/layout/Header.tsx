@@ -2,7 +2,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-import LanguageToggle from "@/components/language/buttonLanguage/ToggleLanguage";
+// import ToggleLanguage from "@/components/language/buttonLanguage/ToggleLanguage";
+
+// interface HeaderProps {
+//   locale: "es" | "en";
+// }
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full px-4 md:px-0">
+    <header className="sticky top-0 z-20 w-full px-4 md:px-0">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 h-16
@@ -48,16 +52,13 @@ export default function Header() {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center justify-between">
-          <LanguageToggle />
-        </div>
+        {/* <div className="hidden md:flex items-center justify-between">
+          <ToggleLanguage currentLocale={locale} />
+        </div> */}
 
         <div className="md:hidden flex items-center justify-between gap-2">
-          <LanguageToggle />
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-          >
+          {/* <ToggleLanguage currentLocale={locale} /> */}
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             <MenuIcon fontSize="large" />
           </button>
         </div>

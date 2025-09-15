@@ -1,0 +1,100 @@
+{
+  "header": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "welcome": "Bienvenido a Mi Portfolio",
+    "title": "Hola, soy José Rosano, un apasionado",
+    "subtitle": "Desarrollador Fullstack.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame",
+    "typewriterTexts": [
+      "Me encanta programar y crear soluciones innovadoras",
+      "Explora mis proyectos y conoce más sobre mí"
+    ]
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy desarrollador full-stack. Mis habilidades más fuertes son HTML5, CSS3 y JavaScript. También me siento cómodo trabajando con frameworks como NextJs. Constantemente estoy ampliando mis conocimientos con nuevas herramientas y tecnologías. Mi objetivo es siempre aprender, innovar y agregar valor con cada línea de código."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Algunos de mis proyectos recientes.",
+    "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Portfolio Next.js con glassmorphism, scroll suave y animaciones sutiles."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Tienda Next.js full-stack con catálogo de productos y carrito; incluye panel de administración."
+      },
+      "weather": {
+        "title": "App del Clima",
+        "description": "Aplicación del clima en tiempo real usando la API de OpenWeatherMap con pronósticos basados en ubicación."
+      },
+      "website": {
+        "title": "Sitio Web",
+        "description": "Sitio web profesional de fitness con diseño responsivo y rendimiento optimizado."
+      },
+      "todoList": {
+        "title": "Lista de Tareas",
+        "description": "Aplicación full-stack de gestión de tareas con React y MongoDB, con operaciones CRUD."
+      },
+      "todoListJS": {
+        "title": "Lista de Tareas JS",
+        "description": "Aplicación de tareas en JavaScript puro demostrando manipulación del DOM y habilidades de vanilla JS."
+      }
+    }
+  },
+  "techStack": {
+    "title": "Stack Tecnológico"
+  },
+  "repositories": {
+    "title": "Últimos Repositorios",
+    "viewOnGitHub": "Ver en GitHub"
+  },
+  "footer": {
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Estoy abierto a nuevas oportunidades. Ya sea freelance, remoto o presencial.",
+      "sendEmail": "Enviar Email",
+      "whatsapp": "WhatsApp"
+    },
+    "brand": {
+      "name": "JRDev",
+      "description": "Desarrollador full-stack. Creo experiencias web limpias, rápidas y accesibles."
+    },
+    "navigation": {
+      "site": {
+        "title": "Sitio",
+        "aboutMe": "Sobre mí",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+      },
+      "resources": {
+        "title": "Recursos",
+        "resume": "Currículum",
+        "latestRepos": "Últimos repos"
+      },
+      "contact": {
+        "title": "Contacto",
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "bottom": {
+      "copyright": "Jose Rosano.",
+      "builtWith": "Construido con Next.js y Tailwind",
+      "backToTop": "Volver arriba"
+    }
+  },
+  "language": {
+    "switchTo": "Cambiar a",
+    "spanish": "Español",
+    "english": "Inglés"
+  }
+}

@@ -1,20 +1,34 @@
-import { useState } from "react";
+"use client";
+
+import { usePathname, useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 type Language = "es" | "en";
 
-export default function LanguageToggle() {
-  const [language, setLanguage] = useState<Language>("en");
+interface ToggleLanguageProps {
+  currentLocale: Language; 
+}
+
+export default function ToggleLanguage({ currentLocale }: ToggleLanguageProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
 
   const toggleLanguage = () => {
-    const newLang: Language = language === "es" ? "en" : "es";
-    setLanguage(newLang);
+    const newLang: Language = currentLocale === "es" ? "en" : "es";
 
-    // Aquí puedes agregar la lógica para cambiar el idioma de tu aplicación
-    // Por ejemplo: i18n.changeLanguage(newLang);
+    startTransition(() => {
+      const newPath = pathname.replace(`/${currentLocale}`, `/${newLang}`);
+      router.push(newPath);
+    });
+
     console.log("Idioma cambiado a:", newLang);
   };
 
-  const languageConfig: Record<Language, { label: string; short: string; switchTo: string }> = {
+  const languageConfig: Record<
+    Language,
+    { label: string; short: string; switchTo: string }
+  > = {
     es: {
       label: "Español",
       short: "ES",
@@ -27,19 +41,22 @@ export default function LanguageToggle() {
     },
   };
 
-  const currentLang = languageConfig[language];
-  const nextLang = languageConfig[language === "es" ? "en" : "es"];
+  const currentLang = languageConfig[currentLocale]; 
+  const nextLang = languageConfig[currentLocale === "es" ? "en" : "es"];
 
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 px-2 py-2 rounded-md bg-white/10 hover:bg-white/20 
+      disabled={isPending} 
+      className={`flex items-center gap-2 px-2 py-2 rounded-md bg-white/10 hover:bg-white/20 
                  transition-all duration-200 ease-in-out backdrop-blur-sm border border-white/20
-                 text-white hover:text-white active:scale-95 group cursor-pointer"
+                 text-white hover:text-white active:scale-95 group cursor-pointer
+                 ${isPending ? "opacity-50" : ""}`} 
       title={`${currentLang.switchTo}`}
     >
       <svg
-        className="w-4 h-4 group-hover:rotate-12 transition-transform duration-200 hidden sm:block"
+        className={`w-4 h-4 group-hover:rotate-12 transition-transform duration-200 hidden sm:block
+                   ${isPending ? "animate-spin" : ""}`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
