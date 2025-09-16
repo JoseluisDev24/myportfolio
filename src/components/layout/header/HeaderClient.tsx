@@ -2,19 +2,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-// import ToggleLanguage from "@/components/language/buttonLanguage/ToggleLanguage";
 
-// interface HeaderProps {
-//   locale: "es" | "en";
-// }
+interface HeaderClientProps {
+  dict: Dictionary;
+}
 
-export default function Header() {
+export default function HeaderClient({ dict }: HeaderClientProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "About me", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "/JoseluisRosano.pdf", target: "_blank" },
+    { name: dict.header.about, href: "#about" },
+    { name: dict.header.projects, href: "#projects" },
+    { name: dict.header.resume, href: "/JoseluisRosano.pdf", target: "_blank" },
   ];
 
   return (
@@ -52,12 +51,7 @@ export default function Header() {
           ))}
         </ul>
 
-        {/* <div className="hidden md:flex items-center justify-between">
-          <ToggleLanguage currentLocale={locale} />
-        </div> */}
-
         <div className="md:hidden flex items-center justify-between gap-2">
-          {/* <ToggleLanguage currentLocale={locale} /> */}
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             <MenuIcon fontSize="large" />
           </button>

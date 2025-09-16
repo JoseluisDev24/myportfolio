@@ -13,7 +13,7 @@ export default async function Home({
 
   return (
     <div>
-      <div className="fixed top-16 right-4 z-[15] md:z-[25]">
+      <div className="fixed top-18 right-4 z-[15] md:z-[25]">
         <ToggleLanguage currentLocale={locale} />
       </div>
 

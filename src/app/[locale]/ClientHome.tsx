@@ -8,7 +8,7 @@ import About from "@/components/about/About";
 import Skills from "@/components/skills/Skills";
 import Link from "next/link";
 import LatestRepos from "@/components/latestRepos/LatestRepos";
-import Header from "@/components/layout/Header";
+import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
 
 interface ClientHomeProps {
@@ -18,7 +18,7 @@ interface ClientHomeProps {
 export default function ClientHome({ dict }: ClientHomeProps) {
   return (
     <>
-      <Header />
+      <Header dict={dict} />
 
       <div className="relative min-h-screen overflow-hidden">
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
@@ -116,7 +116,7 @@ export default function ClientHome({ dict }: ClientHomeProps) {
               <section>
                 <Skills dict={dict} />
               </section>
-              <section>
+              <section id="repos">
                 <LatestRepos dict={dict} />
               </section>
             </main>
