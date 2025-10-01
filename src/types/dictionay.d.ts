@@ -45,6 +45,18 @@ declare global {
           title: string;
           description: string;
         };
+        kinesiologyLanding: {
+          title: string;
+          description: string;
+        };
+        gymLanding: {
+          title: string;
+          description: string;
+        };
+        tradeUPclone: {
+          title: string;
+          description: string;
+        };
       };
     };
     techStack: {

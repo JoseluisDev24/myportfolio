@@ -5,7 +5,7 @@ import ToggleLanguage from "@/components/language/buttonLanguage/ToggleLanguage"
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: "es" | "en" }>; 
+  params: Promise<{ locale: "es" | "en" }>;
 }) {
   const { locale } = await params;
 

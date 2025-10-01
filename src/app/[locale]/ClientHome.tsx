@@ -10,7 +10,7 @@ import Link from "next/link";
 import LatestRepos from "@/components/latestRepos/LatestRepos";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
-
+import { motion } from "motion/react";
 interface ClientHomeProps {
   dict: Dictionary;
 }
@@ -40,7 +40,12 @@ export default function ClientHome({ dict }: ClientHomeProps) {
         <div className="relative z-10 flex min-h-screen flex-col">
           <div className="flex-1 w-full max-w-5xl mx-auto">
             <main className="w-full px-4 md:px-0">
-              <section className="flex min-h-[calc(100svh-64px)] flex-col items-center justify-center gap-8 md:flex-row">
+              <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="flex min-h-[calc(100svh-64px)] flex-col items-center justify-center gap-8 md:flex-row"
+              >
                 <div className="order-1 relative flex justify-center md:order-2 md:justify-end">
                   <div
                     aria-hidden
@@ -69,7 +74,7 @@ export default function ClientHome({ dict }: ClientHomeProps) {
                   </div>
                 </div>
 
-                <div className="order-2 max-w-2xl text-center md:order-1 md:text-left flex flex-col gap-3">
+                <motion.div className="order-2 max-w-2xl text-center md:order-1 md:text-left flex flex-col gap-3">
                   <h1 className="text-4xl font-bold font-sans sm:text-6xl">
                     {dict.hero.welcome}
                   </h1>
@@ -105,8 +110,8 @@ export default function ClientHome({ dict }: ClientHomeProps) {
                       {dict.hero.contactMe}
                     </Link>
                   </div>
-                </div>
-              </section>
+                </motion.div>
+              </motion.section>
               <section id="about">
                 <About dict={dict} />
                 <section id="projects">

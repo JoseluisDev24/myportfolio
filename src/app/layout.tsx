@@ -21,6 +21,23 @@ export const metadata: Metadata = {
   title: "Portfolio | Jose Rosano",
   description:
     "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
+  openGraph: {
+    title: "Portfolio | Jose Rosano",
+    description:
+      "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
+    url: "https://myportfolio-jlrc.vercel.app/",
+    siteName: "Portfolio | Jose Rosano",
+    images: [
+      {
+        url: "https://myportfolio-jlrc.vercel.app/portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio | Jose Rosano",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

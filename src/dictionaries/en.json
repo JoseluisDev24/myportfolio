@@ -46,6 +46,18 @@
       "todoListJS": {
         "title": "Todo List JS",
         "description": "Pure JavaScript todo application demonstrating DOM manipulation and vanilla JS skills."
+      },
+      "kinesiologyLanding": {
+        "title": "Kinesiology Landing",
+        "description": "Professional landing page for kinesiology services with responsive design and SEO optimization."
+      },
+      "gymLanding": {
+        "title": "Gym Landing",
+        "description": "Professional fitness website with responsive design and optimized performance."
+      },
+      "tradeUPclone": {
+        "title": "Trade UP clone",
+        "description": "Trade UP platform clone built with Next.js, Tailwind CSS."
       }
     }
   },

@@ -57,6 +57,27 @@ export default function Projects({ dict }: ProjectsProps) {
       tags: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://todo-bios.netlify.app//",
     },
+    {
+      title: dict.projects.items.kinesiologyLanding.title,
+      description: dict.projects.items.kinesiologyLanding.description,
+      imageSrc: "/projects/kine.png",
+      tags: ["NextJS", "Framer motion", "Tailwind"],
+      liveUrl: "https://kine-page.vercel.app",
+    },
+    {
+      title: dict.projects.items.gymLanding.title,
+      description: dict.projects.items.gymLanding.description,
+      imageSrc: "/projects/gym.png",
+      tags: ["NextJS", "Framer motion", "Tailwind"],
+      liveUrl: "https://gym-hub-eta.vercel.app",
+    },
+    {
+      title: dict.projects.items.tradeUPclone.title,
+      description: dict.projects.items.tradeUPclone.description,
+      imageSrc: "/projects/tradeUp.png",
+      tags: ["NextJS", "JSON", "MUI"],
+      liveUrl: "https://card-trading-two.vercel.app",
+    },
   ];
 
   return (
