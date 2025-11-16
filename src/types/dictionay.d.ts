@@ -21,6 +21,10 @@ declare global {
       title: string;
       subtitle: string;
       items: {
+        reserva5: {
+          title: string;
+          description: string;
+        };
         portfolio: {
           title: string;
           description: string;

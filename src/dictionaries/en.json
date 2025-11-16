@@ -23,6 +23,10 @@
     "title": "Projects",
     "subtitle": "Here are some of my recent projects.",
     "items": {
+      "reserva5": {
+        "title": "Reservá5",
+        "description": "Football field reservation app with Next.js, Tailwind CSS, and Next Auth."
+      },
       "portfolio": {
         "title": "Portfolio",
         "description": "Next.js portfolio with glassmorphism, smooth scroll, and subtle animations."

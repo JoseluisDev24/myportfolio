@@ -23,9 +23,13 @@
     "title": "Proyectos",
     "subtitle": "Algunos de mis proyectos recientes.",
     "items": {
+      "reserva5": {
+        "title": "Reservá5",
+        "description": "App de reservas de canchas de fútbol con Next.js, Tailwind CSS y Next Auth."
+      },
       "portfolio": {
         "title": "Portfolio",
-        "description": "Portfolio Next.js con glassmorphism, scroll suave y animaciones sutiles."
+        "description": "Portfolio Next.js con glassmorphismo, scroll suave y animaciones sutiles."
       },
       "ecommerce": {
         "title": "E-commerce",

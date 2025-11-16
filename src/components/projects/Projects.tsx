@@ -12,6 +12,14 @@ export default function Projects({ dict }: ProjectsProps) {
 
   const projects = [
     {
+      title: dict.projects.items.reserva5.title,
+      description: dict.projects.items.reserva5.description,
+      imageSrc: "/projects/reserva5.png",
+      tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
+      liveUrl: "https://reservation-system-beta-blond.vercel.app/",
+      repoUrl: "https://github.com/JoseluisDev24/reservation-system.git",
+    },
+    {
       title: dict.projects.items.portfolio.title,
       description: dict.projects.items.portfolio.description,
       imageSrc: "/projects/portfolio.png",
@@ -61,21 +69,21 @@ export default function Projects({ dict }: ProjectsProps) {
       title: dict.projects.items.kinesiologyLanding.title,
       description: dict.projects.items.kinesiologyLanding.description,
       imageSrc: "/projects/kine.png",
-      tags: ["NextJS", "Framer motion", "Tailwind"],
+      tags: ["Next.js", "Framer motion", "Tailwind"],
       liveUrl: "https://kine-page.vercel.app",
     },
     {
       title: dict.projects.items.gymLanding.title,
       description: dict.projects.items.gymLanding.description,
       imageSrc: "/projects/gym.png",
-      tags: ["NextJS", "Framer motion", "Tailwind"],
+      tags: ["Next.js", "Framer motion", "Tailwind"],
       liveUrl: "https://gym-hub-eta.vercel.app",
     },
     {
       title: dict.projects.items.tradeUPclone.title,
       description: dict.projects.items.tradeUPclone.description,
       imageSrc: "/projects/tradeUp.png",
-      tags: ["NextJS", "JSON", "MUI"],
+      tags: ["Next.js", "JSON", "MUI"],
       liveUrl: "https://card-trading-two.vercel.app",
     },
   ];
