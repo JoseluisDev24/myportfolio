@@ -48,7 +48,7 @@ export default function ToggleLanguage({ currentLocale }: ToggleLanguageProps) {
     <button
       onClick={toggleLanguage}
       disabled={isPending} 
-      className={`flex items-center gap-2 px-2 py-2 rounded-md bg-white/10 hover:bg-white/20 
+      className={`flex items-center gap-2 px-2 py-2 rounded-md hover:bg-white/20 
                  transition-all duration-200 ease-in-out backdrop-blur-sm border border-white/20
                  text-white hover:text-white active:scale-95 group cursor-pointer
                  ${isPending ? "opacity-50" : ""}`} 

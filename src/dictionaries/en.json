@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a full-stack developer. My strongest skills are HTML5, CSS3, and JavaScript. I'm also comfortable working with frameworks like NextJs. I'm constantly expanding my knowledge with new tools and technologies. My goal is to always learn, innovate, and add value with every line of code."
+    "description": "Fullstack Developer specialized in Next.js, React, and MongoDB, with experience in multi-tenant architectures and SaaS applications.\n\nRecently developed Reservá5, a complete sports facility reservation management system with authentication, admin dashboard, and automated WhatsApp notifications.\n\nMy stack: Next.js 15, React, Node.js, MongoDB, TailwindCSS, NextAuth, API integrations (Twilio, Cloudinary).\n\nLooking for opportunities to apply my skills in challenging projects and continue growing as a developer.\n\n📧 Open to collaborations and new projects."
   },
   "projects": {
     "title": "Projects",
@@ -25,7 +25,7 @@
     "items": {
       "reserva5": {
         "title": "Reservá5",
-        "description": "Football field reservation app with Next.js, Tailwind CSS, and Next Auth."
+        "description": "Football field reservation system with Next.js, Tailwind CSS, and Next Auth."
       },
       "portfolio": {
         "title": "Portfolio",

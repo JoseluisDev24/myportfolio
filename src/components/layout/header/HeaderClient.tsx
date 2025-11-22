@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 interface HeaderClientProps {
   dict: Dictionary;
@@ -51,33 +52,56 @@ export default function HeaderClient({ dict }: HeaderClientProps) {
           ))}
         </ul>
 
-        <div className="md:hidden flex items-center justify-between gap-2">
-          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
-            <MenuIcon fontSize="large" />
-          </button>
-        </div>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+          className="md:hidden relative z-50 p-2 rounded-lg
+                    
+                     hover:bg-white/10 transition-all"
+        >
+          {isOpen ? (
+            <CloseIcon fontSize="large" className="text-white" />
+          ) : (
+            <MenuIcon fontSize="large" className="text-white" />
+          )}
+        </button>
       </nav>
 
       {isOpen && (
-        <div
-          className="
-            fixed inset-0 z-40 md:hidden
-            bg-black/90 backdrop-blur-[2px]"
-          onClick={() => setIsOpen(false)}
-          aria-hidden
-        >
+        <>
           <div
-            className="fixed top-16 inset-x-0 z-50 md:hidden"
+            className="fixed inset-0 z-30 bg-black/80 backdrop-blur-sm
+                       animate-fadeIn md:hidden"
+            onClick={() => setIsOpen(false)}
+            aria-hidden
+          />
+
+          <div
+            className="fixed top-16 inset-x-0 z-40 md:hidden
+                       animate-slideDown"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mx-auto max-w-5xl px-6 py-6">
-              <ul className="flex flex-col items-center gap-4 text-center">
-                {menuItems.map((item) => (
-                  <li key={item.name} className="w-full">
+            <div
+              className="mx-4 mt-4 rounded-2xl overflow-hidden
+                           bg-white/5 backdrop-blur-xl
+                           border border-white/10
+                           shadow-2xl shadow-black/50"
+            >
+              <ul className="flex flex-col divide-y divide-white/5">
+                {menuItems.map((item, index) => (
+                  <li
+                    key={item.name}
+                    className="animate-slideUp"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
                     <Link
                       href={item.href}
                       target={item.target}
-                      className="block py-2 hover:underline"
+                      className="block px-6 py-4 text-lg text-center
+                                 text-white/90 font-medium
+                                 hover:bg-white/10 hover:text-white
+                                 active:bg-white/15
+                                 transition-all duration-200"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -85,9 +109,15 @@ export default function HeaderClient({ dict }: HeaderClientProps) {
                   </li>
                 ))}
               </ul>
+
+              <div className="px-6 py-4 bg-white/5 border-t border-white/5">
+                <p className="text-xs text-center text-white/60">
+                  © 2024 JRDev
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

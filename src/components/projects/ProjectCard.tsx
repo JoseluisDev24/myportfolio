@@ -6,7 +6,6 @@ import type { SVGProps } from "react";
 
 type Size = "sm" | "md";
 
-
 export type ProjectCardProps = {
   title: string;
   description: string;
@@ -39,12 +38,11 @@ export default function ProjectCard({
         "bg-white/8 backdrop-blur-xl border border-white/15",
         "shadow-[0_8px_30px_rgba(0,0,0,0.25)]",
         "ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300",
-
+        "flex flex-col",
         "before:content-[''] before:pointer-events-none",
         "before:absolute before:-inset-[1px] before:-z-10 before:rounded-xl",
         "before:bg-gradient-to-br before:from-blue-500/20 before:via-cyan-400/10 before:to-transparent",
         "before:opacity-0 group-hover:before:opacity-100 before:transition-opacity",
-
         className,
       ].join(" ")}
     >
@@ -71,25 +69,27 @@ export default function ProjectCard({
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
 
-      <div className="p-4">
-        <h3
-          className={
-            isSm
-              ? "text-base md:text-lg font-semibold text-white"
-              : "text-xl md:text-2xl font-semibold text-white"
-          }
-        >
-          {title}
-        </h3>
+      <div className="p-4 flex flex-col flex-grow">
+        <div className="flex-grow">
+          <h3
+            className={
+              isSm
+                ? "text-base md:text-lg font-semibold text-white"
+                : "text-xl md:text-2xl font-semibold text-white"
+            }
+          >
+            {title}
+          </h3>
 
-        <p
-          className={[
-            isSm ? "mt-1 text-sm md:text-base" : "mt-2 text-base",
-            "text-gray-300/90 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] md:line-clamp-none",
-          ].join(" ")}
-        >
-          {description}
-        </p>
+          <p
+            className={[
+              isSm ? "mt-1 text-sm md:text-base" : "mt-2 text-base",
+              "text-gray-300/90 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] md:line-clamp-none",
+            ].join(" ")}
+          >
+            {description}
+          </p>
+        </div>
 
         {tags.length > 0 && (
           <ul className="mt-3 flex flex-wrap gap-2">
@@ -139,7 +139,6 @@ export default function ProjectCard({
   );
 }
 
-
 type GlassButtonProps =
   | {
       as: "a";
@@ -180,12 +179,15 @@ function GlassButton(props: GlassButtonProps) {
     );
   }
   return (
-    <button aria-label={props.ariaLabel} className={`${base} ${sizeCls}`}>
+    <button
+      aria-label={props.ariaLabel}
+      className={`${base} ${sizeCls}`}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );
 }
-
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number | string };
 
