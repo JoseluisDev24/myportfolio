@@ -42,7 +42,6 @@ export default function ToggleLanguage({ currentLocale }: ToggleLanguageProps) {
   };
 
   const currentLang = languageConfig[currentLocale]; 
-  const nextLang = languageConfig[currentLocale === "es" ? "en" : "es"];
 
   return (
     <button
