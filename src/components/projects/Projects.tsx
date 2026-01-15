@@ -1,4 +1,6 @@
-import SplitText from "@/components/text/SplitText";
+"use client";
+
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 interface ProjectsProps {
@@ -6,10 +8,6 @@ interface ProjectsProps {
 }
 
 export default function Projects({ dict }: ProjectsProps) {
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
-
   const projects = [
     {
       title: dict.projects.items.reserva5.title,
@@ -89,30 +87,58 @@ export default function Projects({ dict }: ProjectsProps) {
   ];
 
   return (
-    <div
-      id="projects"
-      className="flex flex-col items-center justify-center mt-16 mb-6"
-    >
-      <SplitText
-        text={dict.projects.title}
-        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center py-6 drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)]"
-        delay={110}
-        duration={3}
-        ease="power3.out"
-        splitType="lines"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={handleAnimationComplete}
+    <div className="relative">
+      <div
+        aria-hidden
+        className="absolute -right-20 top-10 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl md:-right-4 md:top-5 md:h-60 md:w-60 md:bg-purple-500/4"
       />
-      <p className="text-lg text-gray-400 mb-10">{dict.projects.subtitle}</p>
-      <section className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 px-1">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
-      </section>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-4"
+      >
+        {dict.projects.title}
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.6,
+          delay: 0.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="text-center text-base text-gray-400 mb-12"
+      >
+        {dict.projects.subtitle}
+      </motion.p>
+
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <ProjectCard {...project} />
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

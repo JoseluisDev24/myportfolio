@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import type { SVGProps } from "react";
 
 type Size = "sm" | "md";
@@ -32,21 +33,19 @@ export default function ProjectCard({
   const isSm = size === "sm";
 
   return (
-    <article
+    <motion.article
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.2 }}
       className={[
-        "group relative h-full rounded-lg w-full md:max-w-none mx-auto",
-        "bg-white/8 backdrop-blur-xl border border-white/15",
-        "shadow-[0_8px_30px_rgba(0,0,0,0.25)]",
-        "ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300",
+        "group relative h-full rounded-xl w-full overflow-hidden",
+        "bg-white/[0.02] border border-white/10",
+        "hover:bg-white/[0.05] hover:border-white/20",
+        "transition-all duration-300",
         "flex flex-col",
-        "before:content-[''] before:pointer-events-none",
-        "before:absolute before:-inset-[1px] before:-z-10 before:rounded-xl",
-        "before:bg-gradient-to-br before:from-blue-500/20 before:via-cyan-400/10 before:to-transparent",
-        "before:opacity-0 group-hover:before:opacity-100 before:transition-opacity",
         className,
       ].join(" ")}
     >
-      <div className="relative overflow-hidden rounded-t-xl">
+      <div className="relative overflow-hidden">
         <div
           className={
             isSm
@@ -59,23 +58,23 @@ export default function ProjectCard({
               src={imageSrc}
               alt={imageAlt}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              sizes="(max-width: 768px) 320px, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           ) : (
-            <div className="h-full w-full bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent" />
+            <div className="h-full w-full bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent" />
           )}
         </div>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </div>
 
-      <div className="p-4 flex flex-col flex-grow">
+      <div className="p-5 flex flex-col flex-grow">
         <div className="flex-grow">
           <h3
             className={
               isSm
-                ? "text-base md:text-lg font-semibold text-white"
-                : "text-xl md:text-2xl font-semibold text-white"
+                ? "text-lg font-semibold text-white group-hover:text-blue-400 transition-colors"
+                : "text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors"
             }
           >
             {title}
@@ -83,8 +82,8 @@ export default function ProjectCard({
 
           <p
             className={[
-              isSm ? "mt-1 text-sm md:text-base" : "mt-2 text-base",
-              "text-gray-300/90 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] md:line-clamp-none",
+              isSm ? "mt-2 text-sm" : "mt-2 text-base",
+              "text-gray-400 line-clamp-2 leading-relaxed",
             ].join(" ")}
           >
             {description}
@@ -92,15 +91,11 @@ export default function ProjectCard({
         </div>
 
         {tags.length > 0 && (
-          <ul className="mt-3 flex flex-wrap gap-2">
+          <ul className="mt-4 flex flex-wrap gap-2">
             {tags.map((t) => (
               <li
                 key={t}
-                className={
-                  isSm
-                    ? "rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] md:text-[11px] text-gray-200"
-                    : "rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-gray-200"
-                }
+                className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-gray-300"
               >
                 {t}
               </li>
@@ -111,92 +106,48 @@ export default function ProjectCard({
         {(liveUrl || repoUrl) && (
           <div className="mt-4 flex flex-wrap gap-2">
             {liveUrl && (
-              <GlassButton
-                as="a"
+              <Link
                 href={liveUrl}
-                ariaLabel={`${title} live`}
-                size={size}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg
+                           border border-white/10 bg-white/5
+                           text-xs text-white font-medium
+                           hover:bg-white/10 hover:border-blue-500/50
+                           transition-all duration-200"
               >
-                <span className="text-[11px] md:text-xs">Live</span>
-                <ArrowIcon className="opacity-90" />
-              </GlassButton>
+                <span>Live</span>
+                <ArrowIcon className="w-3.5 h-3.5" />
+              </Link>
             )}
             {repoUrl && (
-              <GlassButton
-                as="a"
+              <Link
                 href={repoUrl}
-                ariaLabel={`${title} repo`}
-                size={size}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg
+                           border border-white/10 bg-white/5
+                           text-xs text-white font-medium
+                           hover:bg-white/10 hover:border-blue-500/50
+                           transition-all duration-200"
               >
-                <GithubIcon className="opacity-90" />
-                <span className="text-[11px] md:text-xs">Repo</span>
-              </GlassButton>
+                <GithubIcon className="w-3.5 h-3.5" />
+                <span>Repo</span>
+              </Link>
             )}
           </div>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }
 
-type GlassButtonProps =
-  | {
-      as: "a";
-      href: string;
-      ariaLabel?: string;
-      children: React.ReactNode;
-      size?: Size;
-    }
-  | {
-      as?: "button";
-      href?: never;
-      ariaLabel?: string;
-      children: React.ReactNode;
-      onClick?: () => void;
-      size?: Size;
-    };
+type IconProps = SVGProps<SVGSVGElement>;
 
-function GlassButton(props: GlassButtonProps) {
-  const base =
-    "inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/8 text-white " +
-    "backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.25)] hover:bg-white/15 hover:border-white/25 transition-colors";
-  const sizeCls =
-    props.size === "sm"
-      ? "px-2.5 py-1 text-[11px] md:px-3 md:py-1.5 md:text-xs"
-      : "px-4 py-2 text-sm";
-
-  if (props.as === "a") {
-    return (
-      <Link
-        href={props.href}
-        aria-label={props.ariaLabel}
-        className={`${base} ${sizeCls}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {props.children}
-      </Link>
-    );
-  }
-  return (
-    <button
-      aria-label={props.ariaLabel}
-      className={`${base} ${sizeCls}`}
-      onClick={props.onClick}
-    >
-      {props.children}
-    </button>
-  );
-}
-
-type IconProps = SVGProps<SVGSVGElement> & { size?: number | string };
-
-function ArrowIcon({ size = 16, className = "", ...props }: IconProps) {
+function ArrowIcon({ className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width={size}
-      height={size}
       aria-hidden
       fill="none"
       stroke="currentColor"
@@ -213,12 +164,10 @@ function ArrowIcon({ size = 16, className = "", ...props }: IconProps) {
   );
 }
 
-function GithubIcon({ size = 16, className = "", ...props }: IconProps) {
+function GithubIcon({ className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width={size}
-      height={size}
       aria-hidden
       fill="currentColor"
       className={className}

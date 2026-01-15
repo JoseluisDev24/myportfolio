@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import SplitText from "../text/SplitText";
+import { motion } from "framer-motion";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
@@ -29,7 +29,7 @@ interface LatestReposProps {
   dict: Dictionary;
 }
 
-export default function LatestRepos({dict}: LatestReposProps) {
+export default function LatestRepos({ dict }: LatestReposProps) {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -112,68 +112,80 @@ export default function LatestRepos({dict}: LatestReposProps) {
     );
   }
 
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
-
   return (
-    <div className="max-w-4xl mx-auto p-6 flex flex-col">
-      <SplitText
-        text={dict.repositories.title}
-        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-6"
-        delay={110}
-        duration={3}
-        ease="power3.out"
-        splitType="lines"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={handleAnimationComplete}
+    <div className="relative">
+      <div
+        aria-hidden
+        className="absolute -left-20 top-10 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl md:-left-4 md:top-5 md:h-60 md:w-60 md:bg-blue-500/4"
       />
 
-      <div className="mt-8 grid gap-5 grid-cols-1 sm:grid-cols-2">
-        {repos.map((repo) => (
-          <article
-            key={repo.name}
-            className="rounded-lg p-5 bg-white/5 backdrop-blur-md border border-white/10 ring-1 ring-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:bg-white/10 transition-colors"
-          >
-            <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
-              {repo.name}
-            </h3>
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-12"
+      >
+        {dict.repositories.title}
+      </motion.h2>
 
-            <p className="mt-2 text-sm sm:text-base text-gray-300/90 line-clamp-2">
-              {repo.description}
-            </p>
-
-            <div className="mt-4 flex items-center justify-between text-sm text-gray-200">
-              <span className="inline-flex items-center gap-2 font-medium">
-                <span aria-hidden className={dotClassFor(repo.language)} />
-                {repo.language}
-              </span>
-              <span className="tabular-nums flex items-center gap-1">
-                <StarIcon className="w-4 h-4" />
-                {repo.stars}
-              </span>
-            </div>
-
-            <div className="mt-1 flex items-center justify-between text-sm text-gray-400">
-              <span>{repo.updatedAgo}</span>
-              <span>Updated</span>
-            </div>
-
-            <a
-              href={repo.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-sky-400 hover:text-sky-300 transition-colors"
+      <div className="mx-auto max-w-4xl px-4">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          {repos.map((repo, index) => (
+            <motion.article
+              key={repo.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              whileHover={{ y: -4 }}
+              className="group rounded-xl p-6 bg-white/[0.02] border border-white/10 
+                         hover:bg-white/[0.05] hover:border-white/20
+                         transition-all duration-300"
             >
-              View on GitHub
-              <ExternalLinkIcon className="w-4 h-4" />
-            </a>
-          </article>
-        ))}
+              <h3 className="text-xl font-semibold tracking-tight text-white group-hover:text-blue-400 transition-colors">
+                {repo.name}
+              </h3>
+
+              <p className="mt-3 text-sm text-gray-400 line-clamp-2 leading-relaxed">
+                {repo.description}
+              </p>
+
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <span className="inline-flex items-center gap-2 font-medium text-gray-300">
+                  <span aria-hidden className={dotClassFor(repo.language)} />
+                  {repo.language}
+                </span>
+                <span className="tabular-nums flex items-center gap-1.5 text-gray-400">
+                  <StarIcon className="w-4 h-4" />
+                  {repo.stars}
+                </span>
+              </div>
+
+              <div className="mt-2 flex items-center justify-between text-xs text-gray-500">
+                <span>Updated {repo.updatedAgo}</span>
+              </div>
+
+              <a
+                href={repo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-400 
+                           hover:text-blue-300 transition-colors group"
+              >
+                {dict.repositories.viewOnGitHub}
+                <ExternalLinkIcon className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </div>
   );
