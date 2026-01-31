@@ -16,6 +16,8 @@ declare global {
     about: {
       title: string;
       description: string;
+      email: string;
+      emailLabel: string;
     };
     projects: {
       title: string;

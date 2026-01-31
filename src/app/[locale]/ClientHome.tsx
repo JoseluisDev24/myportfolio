@@ -88,7 +88,14 @@ export default function ClientHome({ dict }: ClientHomeProps) {
                       delay: 0.3,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="text-4xl font-bold font-sans sm:text-5xl md:text-6xl lg:text-7xl"
+                    className="
+                      font-heading
+                      font-extrabold
+                      text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+                      tracking-tight
+                      bg-gradient-to-r from-white via-blue-300 to-blue-500
+                      bg-clip-text text-transparent
+                    "
                   >
                     {dict.hero.welcome}
                   </motion.h1>

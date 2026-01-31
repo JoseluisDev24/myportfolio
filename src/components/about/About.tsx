@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 interface AboutProps {
   dict: Dictionary;
 }
 
 export default function About({ dict }: AboutProps) {
-  const paragraphs = dict.about.description.split("\n\n");
+  const paragraphs = dict.about.description.split("\n\n").filter(Boolean);
 
   return (
     <div className="relative">
@@ -50,6 +51,32 @@ export default function About({ dict }: AboutProps) {
             {paragraph}
           </motion.p>
         ))}
+
+        <motion.a
+          href={`mailto:${dict.about.email}`}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{
+            duration: 0.6,
+            delay: paragraphs.length * 0.15,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="group mt-8 inline-flex items-center gap-3 text-gray-300 transition hover:text-blue-400"
+        >
+          <MailOutlineIcon
+            sx={{
+              fontSize: 20,
+              color: "#60a5fa", 
+              transition: "transform 0.2s",
+            }}
+            className="group-hover:scale-110"
+          />
+
+          <span className="underline-offset-4 group-hover:underline">
+            {dict.about.emailLabel}
+          </span>
+        </motion.a>
       </div>
     </div>
   );
