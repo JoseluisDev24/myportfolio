@@ -28,7 +28,7 @@ export default function HeaderClient({ dict }: HeaderClientProps) {
     },
     {
       name: dict.header.resume,
-      href: "/JoseluisRosano.pdf",
+      href: "/JoseluisRosanoCV.pdf",
       target: "_blank",
       icon: <DescriptionOutlinedIcon />,
     },
