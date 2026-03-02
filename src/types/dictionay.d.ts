@@ -23,6 +23,10 @@ declare global {
       title: string;
       subtitle: string;
       items: {
+        barberia: {
+          title: string;
+          description: string;
+        };
         reserva5: {
           title: string;
           description: string;

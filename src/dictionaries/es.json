@@ -25,6 +25,10 @@
     "title": "Proyectos",
     "subtitle": "Algunos de mis proyectos recientes.",
     "items": {
+      "barberia": {
+        "title": "Barbería",
+        "description": "Sistema de reservas para barberías realizado con Next.js, Tailwind CSS y Next Auth."
+      },
       "reserva5": {
         "title": "Reservá5",
         "description": "Sistema de reservas de canchas deportivas realizado con Next.js, Tailwind CSS y Next Auth."

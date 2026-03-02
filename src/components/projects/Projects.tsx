@@ -10,6 +10,14 @@ interface ProjectsProps {
 export default function Projects({ dict }: ProjectsProps) {
   const projects = [
     {
+      title: dict.projects.items.barberia.title,
+      description: dict.projects.items.barberia.description,
+      imageSrc: "/projects/barberia.png",
+      tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
+      liveUrl: "https://barberia-frontend-seven.vercel.app/",
+      // repoUrl: "https://github.com/JoseluisDev24/reservation-system.git",
+    },
+    {
       title: dict.projects.items.reserva5.title,
       description: dict.projects.items.reserva5.description,
       imageSrc: "/projects/reserva5.png",
