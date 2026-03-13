@@ -27,6 +27,10 @@ declare global {
           title: string;
           description: string;
         };
+        elpreciado: {
+          title: string;
+          description: string;
+        };
         reserva5: {
           title: string;
           description: string;

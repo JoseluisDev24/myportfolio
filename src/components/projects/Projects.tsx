@@ -17,6 +17,14 @@ export default function Projects({ dict }: ProjectsProps) {
       liveUrl: "https://barberia-frontend-seven.vercel.app/",
       // repoUrl: "https://github.com/JoseluisDev24/reservation-system.git",
     },
+  {
+      title: dict.projects.items.elpreciado.title,
+      description: dict.projects.items.elpreciado.description,
+      imageSrc: "/projects/elpreciado.png",
+      tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
+      liveUrl: "https://el-preciado-viajes.vercel.app/",
+      repoUrl: "https://github.com/JoseluisDev24/el-preciado-viajes.git",
+    },
     {
       title: dict.projects.items.reserva5.title,
       description: dict.projects.items.reserva5.description,

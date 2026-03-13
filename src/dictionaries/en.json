@@ -29,6 +29,10 @@
         "title": "Barbería",
         "description": "Barber shop reservation system with Next.js, Tailwind CSS, and Next Auth."
       },
+      "elpreciado": {
+        "title": "El Preciado Viajes",
+        "description": "Tourism landing and group travel booking for a real client."
+      },
       "reserva5": {
         "title": "Reservá5",
         "description": "Football field reservation system with Next.js, Tailwind CSS, and Next Auth."

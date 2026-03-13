@@ -29,6 +29,10 @@
         "title": "Barbería",
         "description": "Sistema de reservas para barberías realizado con Next.js, Tailwind CSS y Next Auth."
       },
+      "elpreciado": {
+        "title": "El Preciado Viajes",
+        "description": "Landing de turismo y reserva de viajes grupales para cliente real."
+      },
       "reserva5": {
         "title": "Reservá5",
         "description": "Sistema de reservas de canchas deportivas realizado con Next.js, Tailwind CSS y Next Auth."
