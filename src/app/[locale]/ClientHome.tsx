@@ -14,12 +14,13 @@ import { motion } from "framer-motion";
 
 interface ClientHomeProps {
   dict: Dictionary;
+  locale: "es" | "en";
 }
 
-export default function ClientHome({ dict }: ClientHomeProps) {
+export default function ClientHome({ dict, locale }: ClientHomeProps) {
   return (
     <>
-      <Header dict={dict} />
+      <Header dict={dict} locale={locale} />
 
       <div className="relative min-h-screen overflow-hidden">
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
@@ -41,7 +42,10 @@ export default function ClientHome({ dict }: ClientHomeProps) {
         <div className="relative z-10 flex min-h-screen flex-col">
           <div className="flex-1 w-full max-w-5xl mx-auto">
             <main className="w-full px-4 md:px-0">
-              <section className="flex min-h-[calc(100svh-64px)] flex-col items-center justify-center gap-12 md:flex-row md:gap-16">
+              <section className="relative flex min-h-[calc(100svh-64px)] flex-col items-center justify-center gap-12 md:flex-row md:gap-16">
+                {/* Bottom fade into next section */}
+                <div aria-hidden className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -93,7 +97,7 @@ export default function ClientHome({ dict }: ClientHomeProps) {
                       font-extrabold
                       text-4xl sm:text-5xl md:text-6xl lg:text-7xl
                       tracking-tight
-                      bg-gradient-to-r from-white via-blue-300 to-blue-500
+                      bg-gradient-to-r from-white via-blue-200 to-blue-500
                       bg-clip-text text-transparent
                     "
                   >
@@ -143,34 +147,51 @@ export default function ClientHome({ dict }: ClientHomeProps) {
                       delay: 0.9,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="pt-4 flex flex-col gap-3 sm:flex-row sm:gap-4"
+                    className="pt-2 flex items-center gap-6 justify-center md:justify-start"
                   >
                     <Link
                       href={"#projects"}
-                      className="group relative w-full sm:w-auto px-8 py-3 rounded-lg
-                                 bg-blue-600 hover:bg-blue-700
-                                 text-white font-medium text-center
-                                 transition-all duration-300
-                                 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50
-                                 active:scale-95"
+                      className="group inline-flex items-center gap-2
+                                 px-5 py-2.5 rounded-md
+                                 bg-blue-600 hover:bg-blue-500
+                                 text-white text-sm font-medium
+                                 transition-colors duration-200 active:opacity-80"
                     >
                       {dict.hero.viewProjects}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform duration-200">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
                     </Link>
                     <Link
                       href={"#footer"}
-                      className="group relative w-full sm:w-auto px-8 py-3 rounded-lg
-                                 border-2 border-white/20 hover:border-blue-500/50
-                                 bg-white/5 hover:bg-white/10
-                                 text-white font-medium text-center
-                                 backdrop-blur-sm
-                                 transition-all duration-300
-                                 hover:scale-105
-                                 active:scale-95"
+                      className="group inline-flex items-center gap-1.5
+                                 text-sm font-medium text-gray-400 hover:text-white
+                                 transition-colors duration-200"
                     >
                       {dict.hero.contactMe}
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform duration-200">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
                     </Link>
                   </motion.div>
                 </div>
+
+                {/* Scroll indicator */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.4, duration: 0.8 }}
+                  aria-hidden
+                  className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                >
+                  <motion.div
+                    animate={{ y: [0, 7, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+                    className="w-5 h-8 border border-white/20 rounded-full flex items-start justify-center pt-1.5"
+                  >
+                    <div className="w-1 h-2 bg-white/40 rounded-full" />
+                  </motion.div>
+                </motion.div>
               </section>
 
               <section id="about">

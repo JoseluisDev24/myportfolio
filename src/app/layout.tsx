@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins, Manrope } from "next/font/google";
+import { Poppins, Manrope, Syne } from "next/font/google";
 import Background from "@/components/Background";
 
 const poppins = Poppins({
@@ -14,6 +14,13 @@ const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-manrope",
+  display: "swap",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-syne",
   display: "swap",
 });
 
@@ -44,7 +51,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${manrope.variable} ${syne.variable}`}>
       <body className="relative min-h-dvh bg-black text-white antialiased overflow-x-hidden">
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
           <Background />
