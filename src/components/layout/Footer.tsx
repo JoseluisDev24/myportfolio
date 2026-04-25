@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 interface FooterProps {
   dict: Dictionary;
+  locale: "es" | "en";
 }
 
-export default function Footer({ dict }: FooterProps) {
+export default function Footer({ dict, locale }: FooterProps) {
   return (
     <footer
       id="footer"
@@ -166,7 +167,7 @@ export default function Footer({ dict }: FooterProps) {
               </li>
               <li>
                 <Link
-                  href="#repos"
+                  href={`/${locale}/projects`}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {dict.footer.navigation.resources.latestRepos}

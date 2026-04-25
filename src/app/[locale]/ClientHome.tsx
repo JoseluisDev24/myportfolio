@@ -7,7 +7,6 @@ import Projects from "@/components/projects/Projects";
 import About from "@/components/about/About";
 import Skills from "@/components/skills/Skills";
 import Link from "next/link";
-import LatestRepos from "@/components/latestRepos/LatestRepos";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
@@ -97,8 +96,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                       font-extrabold
                       text-4xl sm:text-5xl md:text-6xl lg:text-7xl
                       tracking-tight
-                      bg-gradient-to-r from-white via-blue-200 to-blue-500
-                      bg-clip-text text-transparent
+                      text-white
                     "
                   >
                     {dict.hero.welcome}
@@ -115,7 +113,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                     className="text-lg text-gray-300 sm:text-xl md:text-2xl"
                   >
                     {dict.hero.title}{" "}
-                    <span className="font-semibold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    <span className="font-semibold text-blue-400">
                       {dict.hero.subtitle}
                     </span>
                   </motion.p>
@@ -194,23 +192,21 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                 </motion.div>
               </section>
 
-              <section id="about">
+              <section id="about" className="scroll-mt-20">
                 <About dict={dict} />
-                <section id="projects">
-                  <Projects dict={dict} />
+                <section id="projects" className="scroll-mt-20">
+                  <Projects dict={dict} locale={locale} />
                 </section>
               </section>
               <section>
                 <Skills dict={dict} />
               </section>
-              <section id="repos">
-                <LatestRepos dict={dict} />
-              </section>
+
             </main>
           </div>
         </div>
       </div>
-      <Footer dict={dict} />
+      <Footer dict={dict} locale={locale} />
     </>
   );
 }

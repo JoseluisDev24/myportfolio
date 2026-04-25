@@ -21,12 +21,12 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
   const menuItems = [
     {
       name: dict.header.about,
-      href: "#about",
+      href: `/${locale}#about`,
       icon: <PersonOutlineIcon />,
     },
     {
       name: dict.header.projects,
-      href: "#projects",
+      href: `/${locale}#projects`,
       icon: <WorkOutlineIcon />,
     },
     {
@@ -49,7 +49,7 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
       <nav className="relative mx-auto flex h-16 max-w-5xl items-center justify-between animate-slideDown">
         <Link
           href="/"
-          className="text-3xl font-bold hover:scale-110 transition-transform"
+          className="text-2xl font-bold hover:scale-110 transition-transform"
         >
           JR<span className="text-blue-500">Dev</span>
         </Link>

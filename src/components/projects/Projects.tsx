@@ -2,12 +2,14 @@
 
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import Link from "next/link";
 
 interface ProjectsProps {
   dict: Dictionary;
+  locale: "es" | "en";
 }
 
-export default function Projects({ dict }: ProjectsProps) {
+export default function Projects({ dict, locale }: ProjectsProps) {
   const projects = [
     {
       title: dict.projects.items.barberia.title,
@@ -15,15 +17,6 @@ export default function Projects({ dict }: ProjectsProps) {
       imageSrc: "/projects/barberia.png",
       tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
       liveUrl: "https://barberia-frontend-seven.vercel.app/",
-      // repoUrl: "https://github.com/JoseluisDev24/reservation-system.git",
-    },
-  {
-      title: dict.projects.items.elpreciado.title,
-      description: dict.projects.items.elpreciado.description,
-      imageSrc: "/projects/elpreciado.png",
-      tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
-      liveUrl: "https://el-preciado-viajes.vercel.app/",
-      repoUrl: "https://github.com/JoseluisDev24/el-preciado-viajes.git",
     },
     {
       title: dict.projects.items.reserva5.title,
@@ -32,6 +25,13 @@ export default function Projects({ dict }: ProjectsProps) {
       tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
       liveUrl: "https://reservation-system-beta-blond.vercel.app/",
       repoUrl: "https://github.com/JoseluisDev24/reservation-system.git",
+    },
+    {
+      title: dict.projects.items.tradeUPclone.title,
+      description: dict.projects.items.tradeUPclone.description,
+      imageSrc: "/projects/tradeUp.png",
+      tags: ["Next.js", "JSON", "MUI"],
+      liveUrl: "https://card-trading-two.vercel.app",
     },
     {
       title: dict.projects.items.portfolio.title,
@@ -56,49 +56,6 @@ export default function Projects({ dict }: ProjectsProps) {
       tags: ["Next.js", "API", "Tailwind"],
       liveUrl: "https://weather-app-green-ten-93.vercel.app/",
       repoUrl: "https://github.com/JoseluisDev24/weather-app.git",
-    },
-    {
-      title: dict.projects.items.website.title,
-      description: dict.projects.items.website.description,
-      imageSrc: "/projects/sarandifit.png",
-      tags: ["Vite", "Sass"],
-      liveUrl: "https://sarandifit-prueba.netlify.app/",
-    },
-    {
-      title: dict.projects.items.todoList.title,
-      description: dict.projects.items.todoList.description,
-      imageSrc: "/projects/todolist.png",
-      tags: ["Next.js", "MongoDB", "Tailwind"],
-      liveUrl: "https://back-next-js.vercel.app/",
-      repoUrl: "https://github.com/JoseluisDev24/backNextJS.git",
-    },
-    {
-      title: dict.projects.items.todoListJS.title,
-      description: dict.projects.items.todoListJS.description,
-      imageSrc: "/projects/tododom.png",
-      tags: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "https://todo-bios.netlify.app//",
-    },
-    {
-      title: dict.projects.items.kinesiologyLanding.title,
-      description: dict.projects.items.kinesiologyLanding.description,
-      imageSrc: "/projects/kine.png",
-      tags: ["Next.js", "Framer motion", "Tailwind"],
-      liveUrl: "https://kine-page.vercel.app",
-    },
-    {
-      title: dict.projects.items.gymLanding.title,
-      description: dict.projects.items.gymLanding.description,
-      imageSrc: "/projects/gym.png",
-      tags: ["Next.js", "Framer motion", "Tailwind"],
-      liveUrl: "https://gym-hub-eta.vercel.app",
-    },
-    {
-      title: dict.projects.items.tradeUPclone.title,
-      description: dict.projects.items.tradeUPclone.description,
-      imageSrc: "/projects/tradeUp.png",
-      tags: ["Next.js", "JSON", "MUI"],
-      liveUrl: "https://card-trading-two.vercel.app",
     },
   ];
 
@@ -154,6 +111,37 @@ export default function Projects({ dict }: ProjectsProps) {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-12 flex justify-center"
+        >
+          <Link
+            href={`/${locale}/projects`}
+            className="group inline-flex items-center gap-2
+                       px-5 py-2.5 rounded-md
+                       border border-white/10 bg-white/[0.03]
+                       text-sm font-medium text-gray-300
+                       hover:bg-white/[0.07] hover:border-white/20 hover:text-white
+                       transition-all duration-200"
+          >
+            {dict.projects.viewAll}
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              className="group-hover:translate-x-0.5 transition-transform duration-200"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );

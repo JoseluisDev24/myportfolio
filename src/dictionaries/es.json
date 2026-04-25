@@ -17,13 +17,23 @@
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Desarrollador Fullstack especializado en Next.js, React y MongoDB, con experiencia en arquitecturas multi-tenant y aplicaciones SaaS.\n\nRecientemente desarrollé Reservá5, un sistema completo de gestión de reservas deportivas con autenticación, panel administrativo y notificaciones automáticas vía WhatsApp.\n\nMi stack: Next.js 15, React, Node.js, MongoDB, TailwindCSS, NextAuth, API integrations (Twilio, Cloudinary).\n\nBusco oportunidades para aplicar mis habilidades en proyectos desafiantes y seguir creciendo como desarrollador.\n\n",
+    "description": "Desarrollador Fullstack de Uruguay con más de 2 años formándome en desarrollo web. Disfruto construir productos reales desde cero, aprender en el proceso y colaborar con equipos que busquen crecer juntos.",
     "email": "joseluis24dev@gmail.com",
-    "emailLabel": "Abierto a colaboraciones y nuevos proyectos."
+    "emailLabel": "Contactar",
+    "available": "Disponible inmediatamente",
+    "cta": "¿Hablamos?",
+    "stats": {
+      "yearsLabel": "Años de estudio",
+      "projectsLabel": "Proyectos",
+      "technologiesLabel": "Tecnologías"
+    }
   },
   "projects": {
     "title": "Proyectos",
     "subtitle": "Algunos de mis proyectos recientes.",
+    "viewAll": "Ver todos los proyectos",
+    "allTitle": "Todos los Proyectos",
+    "backHome": "Volver al inicio",
     "items": {
       "barberia": {
         "title": "Barbería",
@@ -103,7 +113,7 @@
       "resources": {
         "title": "Recursos",
         "resume": "Currículum",
-        "latestRepos": "Últimos repos"
+        "latestRepos": "Todos los proyectos"
       },
       "contact": {
         "title": "Contacto",

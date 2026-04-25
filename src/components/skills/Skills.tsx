@@ -24,12 +24,15 @@ export default function TechStack({ dict }: TechStackProps) {
     { name: "Sass", icon: "/skills/sass-min.png" },
 
     { name: "Node.js", icon: "/skills/node-min.png" },
+    { name: "Postman", icon: "/skills/postman.png"},
     { name: "Express", icon: "/skills/expressjs-min.jpg" },
     { name: "MongoDB", icon: "/skills/mongo.png" },
 
     { name: "Git", icon: "/skills/git-min.png" },
     { name: "GitHub", icon: "/skills/github-min.png" },
     { name: "Figma", icon: "/skills/figma.png" },
+
+    { name: "Claude", icon: "/skills/claude.png" },
   ];
 
   return (

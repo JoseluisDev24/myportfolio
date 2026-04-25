@@ -18,10 +18,20 @@ declare global {
       description: string;
       email: string;
       emailLabel: string;
+      available: string;
+      cta: string;
+      stats: {
+        yearsLabel: string;
+        projectsLabel: string;
+        technologiesLabel: string;
+      };
     };
     projects: {
       title: string;
       subtitle: string;
+      viewAll: string;
+      allTitle: string;
+      backHome: string;
       items: {
         barberia: {
           title: string;
