@@ -130,14 +130,23 @@ export default function AllProjectsClient({ dict, locale }: AllProjectsClientPro
         </Link>
       </motion.div>
 
-      <motion.h2
+      <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 text-center drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-16 mb-12"
+        className="font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-gray-100 drop-shadow-[0_2px_10px_rgba(59,130,246,0.30)] mt-6 mb-3"
       >
         {dict.projects.allTitle}
-      </motion.h2>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        className="text-base text-gray-400 mb-12"
+      >
+        {dict.projects.subtitle}
+      </motion.p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
