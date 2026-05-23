@@ -10,7 +10,7 @@ const STACK = ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "Tailwind
 
 export default function About({ dict }: AboutProps) {
   const stats = [
-    { number: "2+", label: dict.about.stats.yearsLabel },
+    { number: "3+", label: dict.about.stats.yearsLabel },
     { number: "12+", label: dict.about.stats.projectsLabel },
     { number: "16+", label: dict.about.stats.technologiesLabel },
   ];
@@ -34,7 +34,6 @@ export default function About({ dict }: AboutProps) {
 
       <div className="mx-auto max-w-3xl px-4 flex flex-col gap-10">
 
-        {/* Intro */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +44,6 @@ export default function About({ dict }: AboutProps) {
           {dict.about.description}
         </motion.p>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +66,7 @@ export default function About({ dict }: AboutProps) {
           ))}
         </motion.div>
 
-        {/* Stack chips */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +84,6 @@ export default function About({ dict }: AboutProps) {
           ))}
         </motion.div>
 
-        {/* Available + CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
