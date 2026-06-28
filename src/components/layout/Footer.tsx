@@ -77,8 +77,11 @@ export default function Footer({ dict, locale }: FooterProps) {
       <div className="mx-auto max-w-5xl px-4 md:px-0 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-bold inline-block mb-4">
-              JR<span className="text-blue-500">Dev</span>
+            <Link href="/" className="text-2xl tracking-normal inline-block mb-4">
+              <span className="font-mono font-light text-gray-500">&lt;</span>
+              <span className="font-mono font-light text-gray-300">JR</span>
+              <span className="font-mono font-bold text-blue-500">Dev</span>
+              <span className="font-mono font-light text-gray-500">/&gt;</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               {dict.footer.brand.description}

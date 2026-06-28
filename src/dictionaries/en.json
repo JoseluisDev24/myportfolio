@@ -2,6 +2,7 @@
   "header": {
     "about": "About",
     "projects": "Projects",
+    "templates": "Services",
     "resume": "Resume"
   },
   "hero": {
@@ -82,6 +83,33 @@
       "tradeUPclone": {
         "title": "Trade UP clone",
         "description": "Trade UP platform clone built with Next.js, Tailwind CSS."
+      }
+    }
+  },
+  "templates": {
+    "title": "Services",
+    "subtitle": "Ready-to-deploy websites for your business. Pick a template, customize it, and go live.",
+    "cta": "I'm interested",
+    "viewDemo": "View demo",
+    "whatsappMessage": "Hi! I'm interested in the template: ",
+    "items": {
+      "basicStore": {
+        "name": "Basic Store",
+        "price": "$250",
+        "description": "Sell online quickly with a clean product catalog, shopping cart, and responsive design.",
+        "features": ["Responsive design", "Mobile friendly", "Contact section"]
+      },
+      "adminStore": {
+        "name": "Premium Store",
+        "price": "$400",
+        "description": "Everything in the basic store plus a full admin panel to manage products and business info.",
+        "features": ["Everything in Basic Store", "Admin dashboard", "Product management", "Access control"]
+      },
+      "businessLanding": {
+        "name": "Business Landing",
+        "price": "$150",
+        "description": "Professional landing page to present your company with all the essential sections.",
+        "features": ["Hero section", "About Us", "Testimonials", "Contact form", "Footer"]
       }
     }
   },

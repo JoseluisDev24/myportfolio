@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import Particles from "@/components/particles/Particles";
 import ToggleLanguage from "@/components/language/buttonLanguage/ToggleLanguage";
 
@@ -30,6 +31,11 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
       icon: <WorkOutlineIcon />,
     },
     {
+      name: dict.header.templates,
+      href: `/${locale}/templates`,
+      icon: <WidgetsOutlinedIcon />,
+    },
+    {
       name: dict.header.resume,
       href: "/JoseluisRosanoCV.pdf",
       target: "_blank",
@@ -49,9 +55,12 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
       <nav className="relative mx-auto flex h-16 max-w-5xl items-center justify-between animate-slideDown">
         <Link
           href="/"
-          className="text-2xl font-bold hover:scale-110 transition-transform"
+          className="text-2xl tracking-normal hover:scale-110 transition-transform"
         >
-          JR<span className="text-blue-500">Dev</span>
+          <span className="font-mono font-light text-gray-500">&lt;</span>
+          <span className="font-mono font-light text-gray-300">JR</span>
+          <span className="font-mono font-bold text-blue-500">Dev</span>
+          <span className="font-mono font-light text-gray-500">/&gt;</span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-6">
@@ -111,10 +120,13 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
               <div className="flex items-center justify-between px-5 h-16 border-b border-white/8">
                 <Link
                   href="/"
-                  className="text-2xl font-bold"
+                  className="text-2xl tracking-normal"
                   onClick={() => setIsOpen(false)}
                 >
-                  JR<span className="text-blue-500">Dev</span>
+                  <span className="font-mono font-light text-gray-500">&lt;</span>
+                  <span className="font-mono font-light text-gray-300">JR</span>
+                  <span className="font-mono font-bold text-blue-500">Dev</span>
+                  <span className="font-mono font-light text-gray-500">/&gt;</span>
                 </Link>
                 <button
                   onClick={() => setIsOpen(false)}

@@ -2,6 +2,7 @@
   "header": {
     "about": "Sobre mí",
     "projects": "Proyectos",
+    "templates": "Servicios",
     "resume": "Currículum"
   },
   "hero": {
@@ -82,6 +83,33 @@
       "tradeUPclone": {
         "title": "Clon de Trade UP",
         "description": "Clon de la plataforma Trade UP con Next.js, Tailwind CSS."
+      }
+    }
+  },
+  "templates": {
+    "title": "Servicios",
+    "subtitle": "Sitios web listos para tu negocio. Elegí una plantilla, personalizala y publicala.",
+    "cta": "Me interesa",
+    "viewDemo": "Ver demo",
+    "whatsappMessage": "¡Hola! Me interesa la plantilla: ",
+    "items": {
+      "basicStore": {
+        "name": "Tienda Básica",
+        "price": "$250",
+        "description": "Vendé online rápidamente con un catálogo de productos, carrito de compras y diseño responsive.",
+        "features": ["Diseño responsive", "Optimizado para móvil", "Sección de contacto"]
+      },
+      "adminStore": {
+        "name": "Tienda Premium",
+        "price": "$400",
+        "description": "Todo lo de la tienda básica más un panel administrativo completo para gestionar productos e informacion del negocio.",
+        "features": ["Todo de la Tienda Básica", "Panel de administración", "Gestión de productos", "Control de acceso"]
+      },
+      "businessLanding": {
+        "name": "Landing de Negocio",
+        "price": "$150",
+        "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
+        "features": ["Sección Hero", "Sobre Nosotros", "Testimonios", "Formulario de contacto", "Footer"]
       }
     }
   },

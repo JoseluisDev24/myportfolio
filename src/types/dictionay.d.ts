@@ -3,6 +3,7 @@ declare global {
     header: {
       about: string;
       projects: string;
+      templates: string;
       resume: string;
     };
     hero: {
@@ -80,6 +81,33 @@ declare global {
         tradeUPclone: {
           title: string;
           description: string;
+        };
+      };
+    };
+    templates: {
+      title: string;
+      subtitle: string;
+      cta: string;
+      viewDemo: string;
+      whatsappMessage: string;
+      items: {
+        basicStore: {
+          name: string;
+          price: string;
+          description: string;
+          features: string[];
+        };
+        adminStore: {
+          name: string;
+          price: string;
+          description: string;
+          features: string[];
+        };
+        businessLanding: {
+          name: string;
+          price: string;
+          description: string;
+          features: string[];
         };
       };
     };
