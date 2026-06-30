@@ -86,7 +86,7 @@ export default function TechStack({ dict }: TechStackProps) {
               {tech.name}
             </span>
 
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-purple-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-20 blur-xl -z-10" />
+            <div className="absolute inset-0 rounded-xl bg-linear-to-br from-blue-500/0 to-purple-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-20 blur-xl -z-10" />
           </motion.div>
         ))}
       </div>

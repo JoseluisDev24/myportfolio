@@ -10,11 +10,11 @@ interface TemplatesClientProps {
 
 const WHATSAPP_NUMBER = "59892171503";
 
-const templateKeys = ["basicStore", "adminStore", "businessLanding"] as const;
+const templateKeys = ["businessLanding", "basicStore", "adminStore"] as const;
 type TemplateKey = (typeof templateKeys)[number];
 
 const categoryLabel: Record<TemplateKey, { es: string; en: string }> = {
-  basicStore: { es: "E-commerce", en: "E-commerce" },
+  basicStore: { es: "Landing", en: "Landing" },
   adminStore: { es: "E-commerce", en: "E-commerce" },
   businessLanding: { es: "Landing", en: "Landing" },
 };

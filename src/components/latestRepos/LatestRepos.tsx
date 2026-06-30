@@ -146,8 +146,8 @@ export default function LatestRepos({ dict }: LatestReposProps) {
                 ease: [0.22, 1, 0.36, 1],
               }}
               whileHover={{ y: -4 }}
-              className="group rounded-xl p-6 bg-white/[0.02] border border-white/10 
-                         hover:bg-white/[0.05] hover:border-white/20
+              className="group rounded-xl p-6 bg-white/2 border border-white/10 
+                         hover:bg-white/5 hover:border-white/20
                          transition-all duration-300"
             >
               <h3 className="text-xl font-semibold tracking-tight text-white group-hover:text-blue-400 transition-colors">

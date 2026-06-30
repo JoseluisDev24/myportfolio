@@ -38,8 +38,8 @@ export default function ProjectCard({
       transition={{ duration: 0.2 }}
       className={[
         "group relative h-full rounded-xl w-full overflow-hidden",
-        "bg-white/[0.02] border border-white/10",
-        "hover:bg-white/[0.05] hover:border-white/20",
+        "bg-white/2 border border-white/10",
+        "hover:bg-white/5 hover:border-white/20",
         "transition-all duration-300",
         "flex flex-col",
         className,
@@ -49,8 +49,8 @@ export default function ProjectCard({
         <div
           className={
             isSm
-              ? "w-full aspect-[21/9] md:aspect-[16/9]"
-              : "w-full aspect-[16/9]"
+              ? "w-full aspect-21/9 md:aspect-video"
+              : "w-full aspect-video"
           }
         >
           {imageSrc ? (
@@ -62,14 +62,14 @@ export default function ProjectCard({
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           ) : (
-            <div className="h-full w-full bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent" />
+            <div className="h-full w-full bg-linear-to-br from-blue-500/10 via-purple-500/5 to-transparent" />
           )}
         </div>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
       </div>
 
-      <div className="p-5 flex flex-col flex-grow">
-        <div className="flex-grow">
+      <div className="p-5 flex flex-col grow">
+        <div className="grow">
           <h3
             className={
               isSm

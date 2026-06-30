@@ -133,6 +133,7 @@ declare global {
         site: {
           title: string;
           aboutMe: string;
+          templates: string;
           projects: string;
           contact: string;
         };

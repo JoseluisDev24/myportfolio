@@ -37,7 +37,7 @@ export default function Footer({ dict, locale }: FooterProps) {
                          text-white rounded-lg font-medium 
                          transition-all duration-300
                          hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50
-                         min-w-[200px] justify-center"
+                         min-w-50 justify-center"
             >
               <MailIcon className="h-5 w-5" />
               {dict.footer.cta.sendEmail}
@@ -51,7 +51,7 @@ export default function Footer({ dict, locale }: FooterProps) {
                          text-white rounded-lg font-medium 
                          transition-all duration-300
                          hover:scale-105 hover:shadow-lg hover:shadow-green-500/50
-                         min-w-[200px] justify-center"
+                         min-w-50 justify-center"
             >
               <WhatsAppIcon className="h-5 w-5" />
               {dict.footer.cta.whatsapp}
@@ -129,7 +129,7 @@ export default function Footer({ dict, locale }: FooterProps) {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="#about"
+                  href={`/${locale}#about`}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {dict.footer.navigation.site.aboutMe}
@@ -137,7 +137,15 @@ export default function Footer({ dict, locale }: FooterProps) {
               </li>
               <li>
                 <Link
-                  href="#projects"
+                  href={`/${locale}/templates`}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {dict.footer.navigation.site.templates}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}#projects`}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {dict.footer.navigation.site.projects}
@@ -145,7 +153,7 @@ export default function Footer({ dict, locale }: FooterProps) {
               </li>
               <li>
                 <Link
-                  href="#footer"
+                  href={`/${locale}#footer`}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {dict.footer.navigation.site.contact}

@@ -95,21 +95,21 @@
     "items": {
       "basicStore": {
         "name": "Basic Store",
-        "price": "$250",
-        "description": "Sell online quickly with a clean product catalog, shopping cart, and responsive design.",
-        "features": ["Responsive design", "Mobile friendly", "Contact section"]
+        "price": "USD 250",
+        "description": "Give your store a professional online presence. Showcase your collections, receive inquiries via email and WhatsApp, and update your business info whenever you want.",
+        "features": ["Collection sections", "WhatsApp button", "Contact form with email", "Panel to edit business info", "Responsive design"]
       },
       "adminStore": {
         "name": "Premium Store",
-        "price": "$400",
-        "description": "Everything in the basic store plus a full admin panel to manage products and business info.",
-        "features": ["Everything in Basic Store", "Admin dashboard", "Product management", "Access control"]
+        "price": "USD 400",
+        "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
+        "features": ["Latest arrivals section", "Catalog with visible prices", "Filter by category", "Panel to manage products"]
       },
       "businessLanding": {
         "name": "Business Landing",
-        "price": "$150",
+        "price": "USD 150",
         "description": "Professional landing page to present your company with all the essential sections.",
-        "features": ["Hero section", "About Us", "Testimonials", "Contact form", "Footer"]
+        "features": ["Hero section", "About Us", "Testimonials", "WhatsApp button", "Footer"]
       }
     }
   },
@@ -135,6 +135,7 @@
       "site": {
         "title": "Site",
         "aboutMe": "About me",
+        "templates": "Templates",
         "projects": "Projects",
         "contact": "Contact"
       },

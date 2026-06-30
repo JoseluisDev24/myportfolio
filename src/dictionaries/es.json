@@ -95,21 +95,21 @@
     "items": {
       "basicStore": {
         "name": "Tienda Básica",
-        "price": "$250",
-        "description": "Vendé online rápidamente con un catálogo de productos, carrito de compras y diseño responsive.",
-        "features": ["Diseño responsive", "Optimizado para móvil", "Sección de contacto"]
+        "price": "USD 250",
+        "description": "Dale presencia online a tu tienda con un diseño profesional. Mostrá tus colecciones, recibí consultas por email y WhatsApp, y editá la información de tu negocio cuando quieras.",
+        "features": ["Secciones de colecciones", "Botón de WhatsApp", "Formulario de contacto con email", "Panel para editar info del negocio", "Diseño responsive"]
       },
       "adminStore": {
         "name": "Tienda Premium",
-        "price": "$400",
-        "description": "Todo lo de la tienda básica más un panel administrativo completo para gestionar productos e informacion del negocio.",
-        "features": ["Todo de la Tienda Básica", "Panel de administración", "Gestión de productos", "Control de acceso"]
+        "price": "USD 400",
+        "description": "Tu tienda online completa. Productos a la vista con precio y filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
+        "features": ["Sección de últimos ingresos", "Catálogo con precios visibles", "Filtro por categoría", "Panel para gestionar productos"]
       },
       "businessLanding": {
         "name": "Landing de Negocio",
-        "price": "$150",
+        "price": "USD 150",
         "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
-        "features": ["Sección Hero", "Sobre Nosotros", "Testimonios", "Formulario de contacto", "Footer"]
+        "features": ["Sección Hero", "Sobre Nosotros", "Testimonios", "Botón de WhatsApp", "Footer"]
       }
     }
   },
@@ -135,6 +135,7 @@
       "site": {
         "title": "Sitio",
         "aboutMe": "Sobre mí",
+        "templates": "Templates",
         "projects": "Proyectos",
         "contact": "Contacto"
       },

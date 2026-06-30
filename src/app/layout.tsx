@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins, Manrope, Syne } from "next/font/google";
-import Background from "@/components/Background";
+import Background from "@/components/layout/Background";
 
 const poppins = Poppins({
   subsets: ["latin"],
