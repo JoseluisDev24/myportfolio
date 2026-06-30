@@ -5,10 +5,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start dev server with Turbopack at localhost:3000
-npm run build    # Production build
-npm run lint     # ESLint check
+pnpm dev      # Start dev server with Turbopack at localhost:3000
+pnpm build    # Production build
+pnpm lint     # ESLint check
 ```
+
+Package manager: **pnpm** (do not use npm — no `package-lock.json` in this repo).
 
 No test suite is configured.
 
