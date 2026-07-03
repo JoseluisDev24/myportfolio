@@ -137,7 +137,7 @@ export default function Footer({ dict, locale }: FooterProps) {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/templates`}
+                  href={`/${locale}/services`}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {dict.footer.navigation.site.templates}

@@ -101,7 +101,7 @@
       },
       "adminStore": {
         "name": "Tienda Premium",
-        "price": "USD 400",
+        "price": "USD 450",
         "description": "Tu tienda online completa. Productos a la vista con precio y filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
         "features": ["Sección de últimos ingresos", "Catálogo con precios visibles", "Filtro por categoría", "Panel para gestionar productos"]
       },

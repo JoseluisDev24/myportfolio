@@ -101,7 +101,7 @@
       },
       "adminStore": {
         "name": "Premium Store",
-        "price": "USD 400",
+        "price": "USD 450",
         "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
         "features": ["Latest arrivals section", "Catalog with visible prices", "Filter by category", "Panel to manage products"]
       },

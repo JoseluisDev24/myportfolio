@@ -27,8 +27,15 @@ const isFeatured: Record<TemplateKey, boolean> = {
 
 const demoUrl: Record<TemplateKey, string> = {
   basicStore: "https://store-basic-ten.vercel.app/",
-  adminStore: "https://barberia-frontend-seven.vercel.app/blessed-studio",
+  adminStore: "https://store-premium-tan.vercel.app/",
   businessLanding: "https://el-preciado-viajes.vercel.app/",
+};
+
+// Jumps straight to the product cards in the preview iframe, since the hero
+// otherwise looks identical to the basicStore template.
+const previewUrl: Record<TemplateKey, string> = {
+  ...demoUrl,
+  adminStore: `${demoUrl.adminStore}#products`,
 };
 
 export default function TemplatesClient({ dict, locale }: TemplatesClientProps) {
@@ -100,7 +107,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                   </div>
                   <div className="relative h-44 overflow-hidden">
                     <iframe
-                      src={demo}
+                      src={previewUrl[key]}
                       loading="lazy"
                       title={item.name}
                       className="absolute top-0 left-0 border-0 pointer-events-none"

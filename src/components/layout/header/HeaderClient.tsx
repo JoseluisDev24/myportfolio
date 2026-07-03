@@ -32,7 +32,7 @@ export default function HeaderClient({ dict, locale }: HeaderClientProps) {
     },
     {
       name: dict.header.templates,
-      href: `/${locale}/templates`,
+      href: `/${locale}/services`,
       icon: <WidgetsOutlinedIcon />,
     },
     {
