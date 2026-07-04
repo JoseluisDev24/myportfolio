@@ -11,6 +11,7 @@ declare global {
       title: string;
       subtitle: string;
       viewProjects: string;
+      viewServices: string;
       contactMe: string;
       typewriterTexts: string[];
     };

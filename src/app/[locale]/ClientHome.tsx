@@ -145,7 +145,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                       delay: 0.9,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="pt-2 flex items-center gap-6 justify-center md:justify-start"
+                    className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-3 justify-center md:justify-start"
                   >
                     <Link
                       href={"#projects"}
@@ -157,6 +157,17 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                     >
                       {dict.hero.viewProjects}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform duration-200">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                    <Link
+                      href={`/${locale}/services`}
+                      className="group inline-flex items-center gap-1.5
+                                 text-sm font-medium text-gray-400 hover:text-white
+                                 transition-colors duration-200"
+                    >
+                      {dict.hero.viewServices}
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform duration-200">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
                     </Link>
