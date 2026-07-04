@@ -28,7 +28,7 @@ const isFeatured: Record<TemplateKey, boolean> = {
 const demoUrl: Record<TemplateKey, string> = {
   basicStore: "https://store-basic-ten.vercel.app/",
   adminStore: "https://store-premium-tan.vercel.app/",
-  businessLanding: "https://el-preciado-viajes.vercel.app/",
+  businessLanding: "https://landing-basic-two.vercel.app/",
 };
 
 // Jumps straight to the product cards in the preview iframe, since the hero
