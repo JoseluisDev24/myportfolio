@@ -98,19 +98,19 @@
         "name": "Tienda Básica",
         "price": "USD 250",
         "description": "Dale presencia online a tu tienda con un diseño profesional. Mostrá tus colecciones, recibí consultas por email y WhatsApp, y editá la información de tu negocio cuando quieras.",
-        "features": ["Secciones de colecciones", "Botón de WhatsApp", "Formulario de contacto con email", "Panel para editar info del negocio", "Diseño responsive"]
+        "features": ["Secciones de colecciones", "Botón de WhatsApp", "Formulario de contacto con email", "Panel para editar info del negocio", "Diseño responsive", "SEO básico (meta tags, Open Graph)"]
       },
       "adminStore": {
         "name": "Tienda Premium",
         "price": "USD 450",
         "description": "Tu tienda online completa. Productos a la vista con precio y filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
-        "features": ["Sección de últimos ingresos", "Catálogo con precios visibles", "Filtro por categoría", "Panel para gestionar productos"]
+        "features": ["Sección de últimos ingresos", "Catálogo con precios visibles", "Filtro por categoría", "Panel para gestionar productos", "SEO completo (sitemap, robots.txt, Open Graph)"]
       },
       "businessLanding": {
         "name": "Landing de Negocio",
         "price": "USD 150",
         "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
-        "features": ["Sección Hero", "Sobre Nosotros", "Testimonios", "Botón de WhatsApp", "Footer"]
+        "features": ["Sección Hero", "Sobre Nosotros", "Testimonios", "Botón de WhatsApp", "Footer", "SEO básico (meta tags, Open Graph)"]
       }
     }
   },

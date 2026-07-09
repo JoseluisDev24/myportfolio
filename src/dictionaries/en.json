@@ -98,19 +98,19 @@
         "name": "Basic Store",
         "price": "USD 250",
         "description": "Give your store a professional online presence. Showcase your collections, receive inquiries via email and WhatsApp, and update your business info whenever you want.",
-        "features": ["Collection sections", "WhatsApp button", "Contact form with email", "Panel to edit business info", "Responsive design"]
+        "features": ["Collection sections", "WhatsApp button", "Contact form with email", "Panel to edit business info", "Responsive design", "Basic SEO (meta tags, Open Graph)"]
       },
       "adminStore": {
         "name": "Premium Store",
         "price": "USD 450",
         "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
-        "features": ["Latest arrivals section", "Catalog with visible prices", "Filter by category", "Panel to manage products"]
+        "features": ["Latest arrivals section", "Catalog with visible prices", "Filter by category", "Panel to manage products", "Full SEO (sitemap, robots.txt, Open Graph)"]
       },
       "businessLanding": {
         "name": "Business Landing",
         "price": "USD 150",
         "description": "Professional landing page to present your company with all the essential sections.",
-        "features": ["Hero section", "About Us", "Testimonials", "WhatsApp button", "Footer"]
+        "features": ["Hero section", "About Us", "Testimonials", "WhatsApp button", "Footer", "Basic SEO (meta tags, Open Graph)"]
       }
     }
   },
