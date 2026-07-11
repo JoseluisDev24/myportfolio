@@ -89,7 +89,7 @@
   },
   "templates": {
     "title": "Services",
-    "subtitle": "Ready-to-deploy websites for your business. Pick a template, customize it, and go live.",
+    "subtitle": "Ready-to-deploy websites for your business. Pick, customize, and go live.",
     "cta": "I'm interested",
     "viewDemo": "View demo",
     "whatsappMessage": "Hi! I'm interested in the template: ",
@@ -98,19 +98,19 @@
         "name": "Basic Store",
         "price": "USD 250",
         "description": "Give your store a professional online presence. Showcase your collections, receive inquiries via email and WhatsApp, and update your business info whenever you want.",
-        "features": ["Collection sections", "WhatsApp button", "Contact form with email", "Panel to edit business info", "Responsive design", "Basic SEO (meta tags, Open Graph)"]
+        "features": ["Collection sections", "Contact form with email", "WhatsApp button", "Panel to edit business info", "Basic SEO (better Google ranking)"]
       },
       "adminStore": {
         "name": "Premium Store",
         "price": "USD 450",
         "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
-        "features": ["Latest arrivals section", "Catalog with visible prices", "Filter by category", "Panel to manage products", "Full SEO (sitemap, robots.txt, Open Graph)"]
+        "features": ["Everything in Basic Store", "Latest arrivals section", "Catalog with visible prices", "Filter by category", "Smooth animations", "Panel to manage products", "Full SEO (optimized indexing and share preview)"]
       },
       "businessLanding": {
         "name": "Business Landing",
         "price": "USD 150",
         "description": "Professional landing page to present your company with all the essential sections.",
-        "features": ["Hero section", "About Us", "Testimonials", "WhatsApp button", "Footer", "Basic SEO (meta tags, Open Graph)"]
+        "features": ["Essential sections (Hero, About Us, Testimonials, Footer)", "WhatsApp button", "Basic SEO (better Google ranking)"]
       }
     }
   },
