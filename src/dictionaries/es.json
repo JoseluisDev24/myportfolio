@@ -104,7 +104,7 @@
         "name": "Tienda Premium",
         "price": "USD 450",
         "description": "Tu tienda online completa. Productos a la vista con precio y filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
-        "features": ["Todo lo de Tienda Básica", "Sección de últimos ingresos", "Catálogo con precios visibles", "Filtro por categoría", "Animaciones fluidas", "Panel para gestionar productos", "SEO completo (indexación optimizada y vista previa al compartir)"]
+        "features": ["Todo lo de Tienda Básica", "Sección de últimos ingresos", "Catálogo con precios visibles", "Carrito con pedido por WhatsApp", "Filtro por categoría", "Animaciones fluidas", "Panel para gestionar productos", "SEO completo (indexación optimizada y vista previa al compartir)"]
       },
       "businessLanding": {
         "name": "Landing de Negocio",

@@ -104,7 +104,7 @@
         "name": "Premium Store",
         "price": "USD 450",
         "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
-        "features": ["Everything in Basic Store", "Latest arrivals section", "Catalog with visible prices", "Filter by category", "Smooth animations", "Panel to manage products", "Full SEO (optimized indexing and share preview)"]
+        "features": ["Everything in Basic Store", "Latest arrivals section", "Catalog with visible prices", "Cart with WhatsApp checkout", "Filter by category", "Smooth animations", "Panel to manage products", "Full SEO (optimized indexing and share preview)"]
       },
       "businessLanding": {
         "name": "Business Landing",
