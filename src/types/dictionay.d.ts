@@ -90,9 +90,10 @@ declare global {
       subtitle: string;
       cta: string;
       viewDemo: string;
+      comingSoon: string;
       whatsappMessage: string;
       items: {
-        basicStore: {
+        corporateWebsite: {
           name: string;
           price: string;
           description: string;

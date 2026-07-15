@@ -92,19 +92,29 @@
     "subtitle": "Sitios web listos para tu negocio. Elegí, personalizá y publicá.",
     "cta": "Me interesa",
     "viewDemo": "Ver demo",
+    "comingSoon": "Demo próximamente",
     "whatsappMessage": "¡Hola! Me interesa la plantilla: ",
     "items": {
-      "basicStore": {
-        "name": "Tienda Básica",
-        "price": "USD 250",
-        "description": "Dale presencia online a tu tienda con un diseño profesional. Mostrá tus colecciones, recibí consultas por email y WhatsApp, y editá la información de tu negocio cuando quieras.",
-        "features": ["Secciones de colecciones", "Formulario de contacto con email", "Botón de WhatsApp", "Panel para editar info del negocio", "SEO básico (mejor posicionamiento en Google)"]
+      "corporateWebsite": {
+        "name": "Sitio Web Corporativo",
+        "price": "USD 300",
+        "description": "Un sitio web profesional de varias páginas para presentar tu empresa. Organizá tu información en páginas dedicadas, recibí consultas por email y WhatsApp, y editá el contenido cuando quieras.",
+        "features": ["Hasta 5 páginas", "Formulario de contacto con email", "Botón de WhatsApp", "Panel para editar contenido", "SEO básico (mejor posicionamiento en Google)"]
       },
       "adminStore": {
-        "name": "Tienda Premium",
-        "price": "USD 450",
-        "description": "Tu tienda online completa. Productos a la vista con precio y filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
-        "features": ["Todo lo de Tienda Básica", "Sección de últimos ingresos", "Catálogo con precios visibles", "Carrito con pedido por WhatsApp", "Filtro por categoría", "Animaciones fluidas", "Panel para gestionar productos", "SEO completo (indexación optimizada y vista previa al compartir)"]
+        "name": "Tienda Online",
+        "price": "USD 550",
+        "description": "Tu tienda online completa. Productos a la vista con precio, ID y varias imágenes, más filtros por categoría. Vos subís y actualizás el stock desde un panel propio, sin depender de nadie.",
+        "features": [
+          "Secciones esenciales",
+          "Sección de catálogo",
+          "Filtro por categoría",
+          "Carrito con pedido por WhatsApp",
+          "Formulario de contacto con email y botón de WhatsApp",
+          "Panel para gestionar productos",
+          "Animaciones fluidas",
+          "SEO completo (indexación optimizada y vista previa al compartir)"
+        ]
       },
       "businessLanding": {
         "name": "Landing de Negocio",

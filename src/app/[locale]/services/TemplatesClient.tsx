@@ -10,30 +10,30 @@ interface TemplatesClientProps {
 
 const WHATSAPP_NUMBER = "59892171503";
 
-const templateKeys = ["businessLanding", "basicStore", "adminStore"] as const;
+const templateKeys = ["businessLanding", "corporateWebsite", "adminStore"] as const;
 type TemplateKey = (typeof templateKeys)[number];
 
 const categoryLabel: Record<TemplateKey, { es: string; en: string }> = {
-  basicStore: { es: "Landing", en: "Landing" },
+  corporateWebsite: { es: "Corporativo", en: "Corporate" },
   adminStore: { es: "E-commerce", en: "E-commerce" },
   businessLanding: { es: "Landing", en: "Landing" },
 };
 
 const isFeatured: Record<TemplateKey, boolean> = {
-  basicStore: false,
+  corporateWebsite: false,
   adminStore: true,
   businessLanding: false,
 };
 
-const demoUrl: Record<TemplateKey, string> = {
-  basicStore: "https://store-basic-ten.vercel.app/",
+// corporateWebsite has no demo yet — its link will be added once that site is built.
+const demoUrl: Partial<Record<TemplateKey, string>> = {
   adminStore: "https://store-premium-tan.vercel.app/",
   businessLanding: "https://landing-basic-two.vercel.app/",
 };
 
 // Jumps straight to the product cards in the preview iframe, since the hero
-// otherwise looks identical to the basicStore template.
-const previewUrl: Record<TemplateKey, string> = {
+// otherwise looks identical to the corporateWebsite template.
+const previewUrl: Partial<Record<TemplateKey, string>> = {
   ...demoUrl,
   adminStore: `${demoUrl.adminStore}#products`,
 };
@@ -102,22 +102,36 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
                     <div className="ml-2 flex-1 bg-white/5 rounded-md px-2 py-0.5 text-[10px] text-gray-500 truncate">
-                      {demo}
+                      {demo ?? t.comingSoon}
                     </div>
                   </div>
-                  <div className="relative h-44 overflow-hidden">
-                    <iframe
-                      src={previewUrl[key]}
-                      loading="lazy"
-                      title={item.name}
-                      className="absolute top-0 left-0 border-0 pointer-events-none"
-                      style={{
-                        width: "1280px",
-                        height: "720px",
-                        transform: "scale(0.245)",
-                        transformOrigin: "top left",
-                      }}
-                    />
+                  <div className="relative h-44 overflow-hidden flex items-center justify-center">
+                    {previewUrl[key] ? (
+                      <iframe
+                        src={previewUrl[key]}
+                        loading="lazy"
+                        title={item.name}
+                        className="absolute top-0 left-0 border-0 pointer-events-none"
+                        style={{
+                          width: "1280px",
+                          height: "720px",
+                          transform: "scale(0.245)",
+                          transformOrigin: "top left",
+                        }}
+                      />
+                    ) : (
+                      <>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                          alt=""
+                          className="absolute inset-0 h-full w-full object-cover opacity-40"
+                        />
+                        <span className="relative text-sm font-medium text-gray-200 bg-black/50 px-3 py-1 rounded-full">
+                          {t.comingSoon}
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
 
@@ -135,11 +149,11 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                     {item.name}
                   </h2>
 
-                  <p className="text-sm text-gray-400 mb-4 leading-relaxed flex-1">
+                  <p className="text-sm text-gray-400 mb-4 leading-relaxed">
                     {item.description}
                   </p>
 
-                  <ul className="space-y-1.5 mb-5">
+                  <ul className="space-y-1.5 mb-5 flex-1">
                     {item.features.map((feature) => (
                       <li
                         key={feature}
@@ -152,17 +166,19 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                   </ul>
 
                   <div className="flex gap-2">
-                    <a
-                      href={demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 flex-1 px-3 py-2.5 rounded-xl font-medium text-sm
-                        border border-white/15 bg-white/5 hover:bg-white/10 text-white
-                        transition-all duration-300 hover:scale-105"
-                    >
-                      <ExternalLinkIcon className="h-3.5 w-3.5" />
-                      {t.viewDemo}
-                    </a>
+                    {demo && (
+                      <a
+                        href={demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-1.5 flex-1 px-3 py-2.5 rounded-xl font-medium text-sm
+                          border border-white/15 bg-white/5 hover:bg-white/10 text-white
+                          transition-all duration-300 hover:scale-105"
+                      >
+                        <ExternalLinkIcon className="h-3.5 w-3.5" />
+                        {t.viewDemo}
+                      </a>
+                    )}
                     <a
                       href={waLink}
                       target="_blank"

@@ -92,19 +92,28 @@
     "subtitle": "Ready-to-deploy websites for your business. Pick, customize, and go live.",
     "cta": "I'm interested",
     "viewDemo": "View demo",
+    "comingSoon": "Demo coming soon",
     "whatsappMessage": "Hi! I'm interested in the template: ",
     "items": {
-      "basicStore": {
-        "name": "Basic Store",
-        "price": "USD 250",
-        "description": "Give your store a professional online presence. Showcase your collections, receive inquiries via email and WhatsApp, and update your business info whenever you want.",
-        "features": ["Collection sections", "Contact form with email", "WhatsApp button", "Panel to edit business info", "Basic SEO (better Google ranking)"]
+      "corporateWebsite": {
+        "name": "Corporate Website",
+        "price": "USD 300",
+        "description": "A professional multi-page website to present your company. Organize your information across dedicated pages, receive inquiries via email and WhatsApp, and update your content whenever you want.",
+        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Panel to edit content", "Basic SEO (better Google ranking)"]
       },
       "adminStore": {
-        "name": "Premium Store",
-        "price": "USD 450",
-        "description": "Your complete online store. Products on display with prices and category filters. You upload and update your inventory from your own panel — no developer needed.",
-        "features": ["Everything in Basic Store", "Latest arrivals section", "Catalog with visible prices", "Cart with WhatsApp checkout", "Filter by category", "Smooth animations", "Panel to manage products", "Full SEO (optimized indexing and share preview)"]
+        "name": "Online Store",
+        "price": "USD 550",
+        "description": "Your complete online store. Products on display with prices, IDs and multiple images, plus category filters. You upload and update your inventory from your own panel — no developer needed.",
+        "features": [
+          "Essential sections",
+          "Catalog section",
+          "Cart with WhatsApp checkout",
+          "Contact form with email and WhatsApp button",
+          "Panel to manage products",
+          "Smooth animations",
+          "Full SEO (optimized indexing and share preview)"
+        ]
       },
       "businessLanding": {
         "name": "Business Landing",
