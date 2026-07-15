@@ -113,6 +113,7 @@
           "Formulario de contacto con email y botón de WhatsApp",
           "Panel para gestionar productos",
           "Animaciones fluidas",
+          "Diseño personalizado",
           "SEO completo (indexación optimizada y vista previa al compartir)"
         ]
       },
@@ -120,7 +121,7 @@
         "name": "Landing de Negocio",
         "price": "USD 150",
         "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
-        "features": ["Secciones esenciales (Hero, Sobre Nosotros, Testimonios, Footer)", "Botón de WhatsApp", "SEO básico (mejor posicionamiento en Google)"]
+        "features": ["Secciones esenciales (Hero, Sobre Nosotros, Testimonios, Footer)", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (mejor posicionamiento en Google)"]
       }
     }
   },

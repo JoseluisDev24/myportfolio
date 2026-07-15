@@ -99,7 +99,7 @@
         "name": "Corporate Website",
         "price": "USD 300",
         "description": "A professional multi-page website to present your company. Organize your information across dedicated pages, receive inquiries via email and WhatsApp, and update your content whenever you want.",
-        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Panel to edit content", "Basic SEO (better Google ranking)"]
+        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Panel to edit content", "Custom design", "Basic SEO (better Google ranking)"]
       },
       "adminStore": {
         "name": "Online Store",
@@ -119,7 +119,12 @@
         "name": "Business Landing",
         "price": "USD 150",
         "description": "Professional landing page to present your company with all the essential sections.",
-        "features": ["Essential sections (Hero, About Us, Testimonials, Footer)", "WhatsApp button", "Basic SEO (better Google ranking)"]
+        "features": [
+          "Essential sections (Hero, About Us, Testimonials, Footer)",
+          "WhatsApp button",
+          "Custom design",
+          "Basic SEO (better Google ranking)"
+        ]
       }
     }
   },
