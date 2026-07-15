@@ -169,7 +169,7 @@ export default function Footer({ dict, locale }: FooterProps) {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="/JoseluisRosano.pdf"
+                  href="/JoseluisRosanoCV.pdf"
                   target="_blank"
                   className="text-gray-400 hover:text-white transition-colors"
                 >

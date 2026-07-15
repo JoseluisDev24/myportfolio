@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import { Poppins, Manrope, Syne } from "next/font/google";
 import Background from "@/components/layout/Background";
+import { siteName, siteUrl } from "@/lib/seo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,35 +26,62 @@ const syne = Syne({
   display: "swap",
 });
 
+const defaultDescription =
+  "Portfolio of Jose Rosano, a full-stack developer specializing in Next.js, React and TypeScript.";
+
 export const metadata: Metadata = {
-  title: "Portfolio | Jose Rosano",
-  description:
-    "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Jose Rosano | Full-Stack Developer",
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
+  authors: [{ name: "Jose Rosano", url: siteUrl }],
+  creator: "Jose Rosano",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   openGraph: {
-    title: "Portfolio | Jose Rosano",
-    description:
-      "portfolio of Jose Rosano, a full-stack developer specializing in modern web technologies.",
-    url: "https://myportfolio-jlrc.vercel.app/",
-    siteName: "Portfolio | Jose Rosano",
+    title: "Jose Rosano | Full-Stack Developer",
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
     images: [
       {
-        url: "https://myportfolio-jlrc.vercel.app/portfolio.png",
-        width: 1200,
-        height: 630,
-        alt: "Portfolio | Jose Rosano",
+        url: "/portfolio.png",
+        width: 273,
+        height: 554,
+        alt: "Jose Rosano | Full-Stack Developer",
       },
     ],
     locale: "en_US",
+    alternateLocale: ["es_UY"],
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Jose Rosano | Full-Stack Developer",
+    description: defaultDescription,
+    images: ["/portfolio.png"],
   },
 };
 
-export default function RootLayout({
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const headersList = await headers();
+  const lang = headersList.get("x-locale") === "es" ? "es" : "en";
+
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${poppins.variable} ${manrope.variable} ${syne.variable}`}
     >
       <body className="relative min-h-dvh bg-black text-white antialiased overflow-x-hidden">
@@ -60,9 +89,9 @@ export default function RootLayout({
           <Background />
         </div>
 
-        <main id="content" className="relative z-10 w-full max-w-8xl mx-auto ">
+        <div id="content" className="relative z-10 w-full max-w-8xl mx-auto ">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );

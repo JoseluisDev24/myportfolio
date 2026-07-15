@@ -46,7 +46,7 @@ export default function AllProjectsClient({ dict, locale }: AllProjectsClientPro
       description: dict.projects.items.portfolio.description,
       imageSrc: "/projects/portfolio.png",
       tags: ["Next.js", "Reactbits", "Tailwind"],
-      liveUrl: "https://myportfolio-jlrc.vercel.app/",
+      liveUrl: "https://www.jrosano.com/",
       repoUrl: "https://github.com/JoseluisDev24/myportfolio.git",
     },
     {
