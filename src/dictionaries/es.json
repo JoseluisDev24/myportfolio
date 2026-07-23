@@ -98,8 +98,8 @@
       "corporateWebsite": {
         "name": "Sitio Web Corporativo",
         "price": "USD 300",
-        "description": "Un sitio web profesional de varias páginas para presentar tu empresa. Organizá tu información en páginas dedicadas, recibí consultas por email y WhatsApp, y editá el contenido cuando quieras.",
-        "features": ["Hasta 5 páginas", "Formulario de contacto con email", "Botón de WhatsApp", "Panel para editar contenido", "SEO básico (mejor posicionamiento en Google)"]
+        "description": "Un sitio web profesional de varias páginas para presentar tu empresa. Organizá tu información en páginas dedicadas, recibí consultas por email y WhatsApp, con un diseño personalizado a tu medida.",
+        "features": ["Hasta 5 páginas", "Formulario de contacto con email", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (mejor posicionamiento en Google)"]
       },
       "adminStore": {
         "name": "Tienda Online",

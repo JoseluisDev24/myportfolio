@@ -25,10 +25,10 @@ const isFeatured: Record<TemplateKey, boolean> = {
   businessLanding: false,
 };
 
-// corporateWebsite has no demo yet — its link will be added once that site is built.
 const demoUrl: Partial<Record<TemplateKey, string>> = {
   adminStore: "https://store-premium-tan.vercel.app/",
   businessLanding: "https://landing-basic-two.vercel.app/",
+  corporateWebsite: "https://corporate-website-teal-iota.vercel.app/",
 };
 
 // Jumps straight to the product cards in the preview iframe, since the hero

@@ -98,8 +98,8 @@
       "corporateWebsite": {
         "name": "Corporate Website",
         "price": "USD 300",
-        "description": "A professional multi-page website to present your company. Organize your information across dedicated pages, receive inquiries via email and WhatsApp, and update your content whenever you want.",
-        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Panel to edit content", "Custom design", "Basic SEO (better Google ranking)"]
+        "description": "A professional multi-page website to present your company. Organize your information across dedicated pages, receive inquiries via email and WhatsApp, with a custom design tailored to you.",
+        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Custom design", "Basic SEO (better Google ranking)"]
       },
       "adminStore": {
         "name": "Online Store",
