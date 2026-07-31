@@ -16,7 +16,7 @@ export default function Projects({ dict, locale }: ProjectsProps) {
       description: dict.projects.items.barberia.description,
       imageSrc: "/projects/barberia.png",
       tags: ["Next.js", "Framer Motion", "Tailwind", "Next Auth"],
-      liveUrl: "https://barberia-frontend-seven.vercel.app/",
+      liveUrl: "https://www.turnafy.com",
     },
     {
       title: dict.projects.items.reserva5.title,

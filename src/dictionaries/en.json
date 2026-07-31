@@ -38,7 +38,7 @@
     "backHome": "Back to home",
     "items": {
       "barberia": {
-        "title": "Barbería",
+        "title": "Turnafy",
         "description": "Barber shop reservation system with Next.js, Tailwind CSS, and Next Auth."
       },
       "elpreciado": {
@@ -124,6 +124,19 @@
           "WhatsApp button",
           "Custom design",
           "Basic SEO (better Google ranking)"
+        ]
+      },
+      "barbershopApp": {
+        "name": "Barbershop App",
+        "price": "UYU 1200/mo",
+        "description": "Online booking system for barbershops. Your clients book 24/7 from any device, you manage the schedule, and no-shows drop with automatic reminders.",
+        "features": [
+          "Email notifications (booking confirmations & reminders)",
+          "24/7 online booking",
+          "Double-booking prevention",
+          "Google Calendar sync",
+          "Real-time metrics dashboard",
+          "Appointment and client reports"
         ]
       }
     }

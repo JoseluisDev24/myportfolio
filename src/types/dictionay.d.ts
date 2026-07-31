@@ -111,6 +111,12 @@ declare global {
           description: string;
           features: string[];
         };
+        barbershopApp: {
+          name: string;
+          price: string;
+          description: string;
+          features: string[];
+        };
       };
     };
     techStack: {

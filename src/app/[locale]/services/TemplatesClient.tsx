@@ -10,25 +10,32 @@ interface TemplatesClientProps {
 
 const WHATSAPP_NUMBER = "59892171503";
 
-const templateKeys = ["businessLanding", "corporateWebsite", "adminStore"] as const;
+const templateKeys = ["businessLanding", "corporateWebsite", "adminStore", "barbershopApp"] as const;
 type TemplateKey = (typeof templateKeys)[number];
 
 const categoryLabel: Record<TemplateKey, { es: string; en: string }> = {
   corporateWebsite: { es: "Corporativo", en: "Corporate" },
   adminStore: { es: "E-commerce", en: "E-commerce" },
   businessLanding: { es: "Landing", en: "Landing" },
+  barbershopApp: { es: "Turnos", en: "Booking" },
 };
 
 const isFeatured: Record<TemplateKey, boolean> = {
   corporateWebsite: false,
   adminStore: true,
   businessLanding: false,
+  barbershopApp: false,
+};
+
+const promoBadge: Partial<Record<TemplateKey, { es: string; en: string }>> = {
+  barbershopApp: { es: "2 meses gratis", en: "2 months free" },
 };
 
 const demoUrl: Partial<Record<TemplateKey, string>> = {
   adminStore: "https://store-premium-tan.vercel.app/",
   businessLanding: "https://landing-basic-two.vercel.app/",
   corporateWebsite: "https://corporate-website-teal-iota.vercel.app/",
+  barbershopApp: "https://www.turnafy.com",
 };
 
 // Jumps straight to the product cards in the preview iframe, since the hero
@@ -43,7 +50,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
 
   return (
     <main className="min-h-screen">
-      <section className="mx-auto max-w-5xl px-4 md:px-0 pt-20 pb-16">
+      <section className="mx-auto max-w-6xl px-4 md:px-0 pt-20 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,7 +73,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {templateKeys.map((key, index) => {
             const item = t.items[key];
             const featured = isFeatured[key];
@@ -74,6 +81,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
             const waMessage = encodeURIComponent(t.whatsappMessage + item.name);
             const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`;
             const demo = demoUrl[key];
+            const promo = promoBadge[key]?.[locale];
 
             return (
               <motion.div
@@ -92,6 +100,14 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                   <div className="absolute top-3 right-3 z-10">
                     <span className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-600 text-white">
                       Popular
+                    </span>
+                  </div>
+                )}
+
+                {promo && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-600 text-white">
+                      {promo}
                     </span>
                   </div>
                 )}
@@ -136,11 +152,11 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                 </div>
 
                 <div className="flex flex-col flex-1 p-5">
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between gap-3 mb-3">
                     <span className="text-xs font-medium px-2.5 py-1 rounded-full border border-white/10 text-gray-400">
                       {category}
                     </span>
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-xl font-bold text-white text-right">
                       {item.price}
                     </span>
                   </div>
@@ -171,11 +187,11 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                         href={demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 flex-1 px-3 py-2.5 rounded-xl font-medium text-sm
+                        className="flex items-center justify-center gap-1 flex-1 px-2 py-2 rounded-xl font-medium text-xs whitespace-nowrap
                           border border-white/15 bg-white/5 hover:bg-white/10 text-white
                           transition-all duration-300 hover:scale-105"
                       >
-                        <ExternalLinkIcon className="h-3.5 w-3.5" />
+                        <ExternalLinkIcon className="h-3.5 w-3.5 shrink-0" />
                         {t.viewDemo}
                       </a>
                     )}
@@ -183,7 +199,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                       href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center gap-1.5 flex-1 px-3 py-2.5 rounded-xl font-medium text-sm
+                      className={`flex items-center justify-center gap-1 flex-1 px-2 py-2 rounded-xl font-medium text-xs whitespace-nowrap
                         transition-all duration-300 hover:scale-105
                         ${
                           featured
@@ -191,7 +207,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                             : "bg-green-700/80 hover:bg-green-700 text-white border border-green-600/30"
                         }`}
                     >
-                      <WhatsAppIcon className="h-3.5 w-3.5" />
+                      <WhatsAppIcon className="h-3.5 w-3.5 shrink-0" />
                       {t.cta}
                     </a>
                   </div>

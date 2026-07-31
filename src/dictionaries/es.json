@@ -38,7 +38,7 @@
     "backHome": "Volver al inicio",
     "items": {
       "barberia": {
-        "title": "Barbería",
+        "title": "Turnafy",
         "description": "Sistema de reservas para barberías realizado con Next.js, Tailwind CSS y Next Auth."
       },
       "elpreciado": {
@@ -122,6 +122,19 @@
         "price": "USD 150",
         "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
         "features": ["Secciones esenciales (Hero, Sobre Nosotros, Testimonios, Footer)", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (mejor posicionamiento en Google)"]
+      },
+      "barbershopApp": {
+        "name": "App para Barberías",
+        "price": "$U 1200/mes",
+        "description": "Sistema de turnos online para barberías. Tus clientes reservan las 24 horas desde cualquier dispositivo, vos gestionás la agenda y reducís las ausencias con recordatorios automáticos.",
+        "features": [
+          "Notificaciones por email (confirmaciones y recordatorios automáticos)",
+          "Reservas online 24/7",
+          "Prevención de dobles reservas",
+          "Sincronización con Google Calendar",
+          "Dashboard con métricas en tiempo real",
+          "Reportes de turnos y clientes"
+        ]
       }
     }
   },
