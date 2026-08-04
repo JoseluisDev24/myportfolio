@@ -33,8 +33,8 @@ const promoBadge: Partial<Record<TemplateKey, { es: string; en: string }>> = {
 
 const demoUrl: Partial<Record<TemplateKey, string>> = {
   adminStore: "https://store-premium-tan.vercel.app/",
-  businessLanding: "https://landing-basic-two.vercel.app/",
-  corporateWebsite: "https://corporate-website-teal-iota.vercel.app/",
+  businessLanding: "https://landing-optica.vercel.app/",
+  corporateWebsite: "https://barraca-institucional.vercel.app/",
   barbershopApp: "https://www.turnafy.com",
 };
 
