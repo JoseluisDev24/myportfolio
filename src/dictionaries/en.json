@@ -99,7 +99,7 @@
         "name": "Corporate Website",
         "price": "USD 300",
         "description": "A professional multi-page website to present your company. Organize your information across dedicated pages, receive inquiries via email and WhatsApp, with a custom design tailored to you.",
-        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Custom design", "Basic SEO (better Google ranking)"]
+        "features": ["Up to 5 pages", "Contact form with email", "WhatsApp button", "Custom design", "Basic SEO (ranks for your business name)", "Share preview (WhatsApp, social media)"]
       },
       "adminStore": {
         "name": "Online Store",
@@ -108,11 +108,14 @@
         "features": [
           "Essential sections",
           "Catalog section",
+          "Category filter",
           "Cart with WhatsApp checkout",
           "Contact form with email and WhatsApp button",
           "Panel to manage products",
           "Smooth animations",
-          "Full SEO (optimized indexing and share preview)"
+          "Custom design",
+          "Full SEO (optimized catalog indexing)",
+          "Share preview (WhatsApp, social media)"
         ]
       },
       "businessLanding": {
@@ -123,7 +126,8 @@
           "Essential sections (Hero, About Us, Testimonials, Footer)",
           "WhatsApp button",
           "Custom design",
-          "Basic SEO (better Google ranking)"
+          "Basic SEO (ranks for your business name)",
+          "Share preview (WhatsApp, social media)"
         ]
       },
       "barbershopApp": {

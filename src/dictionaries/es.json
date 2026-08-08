@@ -99,7 +99,7 @@
         "name": "Sitio Web Corporativo",
         "price": "USD 300",
         "description": "Un sitio web profesional de varias páginas para presentar tu empresa. Organizá tu información en páginas dedicadas, recibí consultas por email y WhatsApp, con un diseño personalizado a tu medida.",
-        "features": ["Hasta 5 páginas", "Formulario de contacto con email", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (mejor posicionamiento en Google)"]
+        "features": ["Hasta 5 páginas", "Formulario de contacto con email", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (posicionamiento por nombre del negocio)", "Vista previa al compartir (WhatsApp, redes)"]
       },
       "adminStore": {
         "name": "Tienda Online",
@@ -114,14 +114,15 @@
           "Panel para gestionar productos",
           "Animaciones fluidas",
           "Diseño personalizado",
-          "SEO completo (indexación optimizada y vista previa al compartir)"
+          "SEO completo (indexación optimizada de catálogo)",
+          "Vista previa al compartir (WhatsApp, redes)"
         ]
       },
       "businessLanding": {
         "name": "Landing de Negocio",
         "price": "USD 150",
         "description": "Landing page profesional para presentar tu empresa con todas las secciones esenciales.",
-        "features": ["Secciones esenciales (Hero, Sobre Nosotros, Testimonios, Footer)", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (mejor posicionamiento en Google)"]
+        "features": ["Secciones esenciales (Hero, Sobre Nosotros, Testimonios, Footer)", "Botón de WhatsApp", "Diseño personalizado", "SEO básico (posicionamiento por nombre del negocio)", "Vista previa al compartir (WhatsApp, redes)"]
       },
       "barbershopApp": {
         "name": "App para Barberías",

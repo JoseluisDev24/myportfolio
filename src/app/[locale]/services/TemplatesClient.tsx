@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 interface TemplatesClientProps {
   dict: Dictionary;
@@ -123,18 +124,7 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
                   </div>
                   <div className="relative h-44 overflow-hidden flex items-center justify-center">
                     {previewUrl[key] ? (
-                      <iframe
-                        src={previewUrl[key]}
-                        loading="lazy"
-                        title={item.name}
-                        className="absolute top-0 left-0 border-0 pointer-events-none"
-                        style={{
-                          width: "1280px",
-                          height: "720px",
-                          transform: "scale(0.245)",
-                          transformOrigin: "top left",
-                        }}
-                      />
+                      <IframePreview src={previewUrl[key]!} title={item.name} />
                     ) : (
                       <>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -218,6 +208,45 @@ export default function TemplatesClient({ dict, locale }: TemplatesClientProps) 
         </div>
       </section>
     </main>
+  );
+}
+
+const PREVIEW_SOURCE_WIDTH = 1280;
+const PREVIEW_SOURCE_HEIGHT = 720;
+
+function IframePreview({ src, title }: { src: string; title: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      setScale(entry.contentRect.width / PREVIEW_SOURCE_WIDTH);
+    });
+    observer.observe(container);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="absolute inset-0">
+      {scale > 0 && (
+        <iframe
+          src={src}
+          loading="lazy"
+          title={title}
+          className="absolute top-0 left-0 border-0 pointer-events-none"
+          style={{
+            width: `${PREVIEW_SOURCE_WIDTH}px`,
+            height: `${PREVIEW_SOURCE_HEIGHT}px`,
+            transform: `scale(${scale})`,
+            transformOrigin: "top left",
+          }}
+        />
+      )}
+    </div>
   );
 }
 
