@@ -66,7 +66,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                   />
 
                   <div
-                    className="relative h-64 w-64 sm:h-72 sm:w-72 md:h-96 md:w-96"
+                    className="relative -mb-8 mt-6 h-72 w-72 sm:mt-0 sm:mb-0 sm:h-80 sm:w-80 md:h-96 md:w-96"
                     style={{
                       WebkitMaskImage:
                         "linear-gradient(to bottom, black 68%, transparent 88%)",
@@ -78,7 +78,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                       src="/perfil-arms2.png"
                       alt="Foto de perfil de J Rosano"
                       fill
-                      sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 384px"
+                      sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
                       className="object-contain"
                       priority
                     />
