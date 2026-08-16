@@ -43,7 +43,7 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
             <main className="w-full px-4 md:px-0">
               <section className="relative flex min-h-[calc(100svh-64px)] flex-col items-center justify-center gap-12 md:flex-row md:gap-16">
                 {/* Bottom fade into next section */}
-                <div aria-hidden className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black to-transparent" />
+                <div aria-hidden className="pointer-events-none absolute bottom-0 left-0 right-0 -z-10 h-32 bg-linear-to-t from-black to-transparent" />
 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -65,20 +65,23 @@ export default function ClientHome({ dict, locale }: ClientHomeProps) {
                     style={{ animationDelay: "1s" }}
                   />
 
-                  <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-80 md:w-80">
-                    <div className="absolute inset-0 rounded-full bg-linear-to-br from-blue-500 via-blue-600 to-purple-600 p-0.5 animate-spin-slow">
-                      <div className="h-full w-full rounded-full bg-black" />
-                    </div>
-                    <div className="absolute inset-0.5 overflow-hidden rounded-full">
-                      <Image
-                        src="/perfil2-min.jpg"
-                        alt="Foto de perfil de J Rosano"
-                        fill
-                        sizes="(max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
-                        className="object-cover"
-                        priority
-                      />
-                    </div>
+                  <div
+                    className="relative h-64 w-64 sm:h-72 sm:w-72 md:h-96 md:w-96"
+                    style={{
+                      WebkitMaskImage:
+                        "linear-gradient(to bottom, black 68%, transparent 88%)",
+                      maskImage:
+                        "linear-gradient(to bottom, black 68%, transparent 88%)",
+                    }}
+                  >
+                    <Image
+                      src="/perfil-arms2.png"
+                      alt="Foto de perfil de J Rosano"
+                      fill
+                      sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 384px"
+                      className="object-contain"
+                      priority
+                    />
                   </div>
                 </motion.div>
 

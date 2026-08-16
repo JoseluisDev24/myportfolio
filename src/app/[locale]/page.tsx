@@ -55,7 +55,7 @@ export default async function Home({ params }: LocaleParams) {
     "@type": "Person",
     name: "Jose Rosano",
     url: `${siteUrl}/${locale}`,
-    image: `${siteUrl}/perfil2-min.jpg`,
+    image: `${siteUrl}/perfil-arms2.png`,
     jobTitle:
       locale === "es" ? "Desarrollador Full-Stack" : "Full-Stack Developer",
     description: dict.about.description,
